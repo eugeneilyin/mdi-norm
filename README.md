@@ -34,11 +34,11 @@ npm install --save mdi-norm
 
 ## Fixes and optimizations
 Compared to official Google system icon set the next fixes, normalization, minification, and deduplications provided:
-* [48 direct SVG content fixes](docs/issues.html) related to icons rendering (hardcoded opacity, whole-area-filled rectangles, hardcoded fill color, etc)
+* [48 direct SVG content fixes](http://htmlpreview.github.com/?https://github.com/eugeneilyin/mdi-norm/blob/master/docs/issues.html) related to icons rendering (hardcoded opacity, whole-area-filled rectangles, hardcoded fill color, etc)
 * Removed all SVG elements and attributes not related to rendering, see all 5,421 changes [here](docs/fixes.md)
 * All group elements removed by unfolding nested groups elements to the SVG root element
 * Attributes reordered to have the same normalized structure across all SVG files
-* Identified 1,966 duplicates (~38%, details [here](docs/duplicates.html)) in 5,220 icons based on:
+* Identified 1,966 duplicates (~38%, details [here](http://htmlpreview.github.io/?https://github.com/eugeneilyin/mdi-norm/blob/master/docs/duplicates.html)) in 5,220 icons based on:
   * Duplicates from equal SVG-code after clearing, normalization, and reordering of SVG elements and attributes
   * Duplicates from same pixels rendering for _different_ SVG-code
   * Duplicates from [Structural Similarity (SSIM)](https://en.wikipedia.org/wiki/Structural_similarity) cross-validation and compare
@@ -195,8 +195,8 @@ The icons required for RTL transformation are listed [here](https://google.githu
 **Decorative** icons are only being used for visual or branding reinforcement. 
 If they were removed from the page, users would still understand and be able to use your page. 
 
-**Semantic** icons (like FABs, menu items as icons only, icon buttons, etc.) are ones that you’re using to convey meaning, rather than just pure decoration.
-This includes icons without text next to them used as interactive controls — buttons, form elements, toggles, etc.
+**Semantic** icons (like FABs, menu items as icons only, icon buttons, etc.) are ones that youÂ’re using to convey meaning, rather than just pure decoration.
+This includes icons without text next to them used as interactive controls Â— buttons, form elements, toggles, etc.
 
 By default all icons are rendered as decorative icons with ``aria-hidden`` attribute added to svg HTML element:
 
@@ -206,7 +206,7 @@ By default all icons are rendered as decorative icons with ``aria-hidden`` attri
 <svg/>  
 ```
 
-If your icons have semantic meaning, you’ll need to manually specify `title` prop with related meaning.
+If your icons have semantic meaning, youÂ’ll need to manually specify `title` prop with related meaning.
 For example `<IconCakeRounded title="Add birthday reminder" ... />` icon will be rendered as:
 
 ```jsx
