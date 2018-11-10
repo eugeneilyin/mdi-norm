@@ -1,0 +1,2 @@
+import { IconSignalCellularConnectedNoInternet1BarFilled as IconSignalCellularConnectedNoInternet1BarOutlined } from './IconSignalCellularConnectedNoInternet1BarFilled'
+export { IconSignalCellularConnectedNoInternet1BarOutlined }

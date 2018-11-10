@@ -1,0 +1,68 @@
+{
+  "name": "mdi-norm",
+  "version": "1.0.0",
+  "description": "Fixed, normalized, minifed, and deduplicated Material Design system SVG icons for React",
+  "license": "MIT",
+  "keywords": [
+    "material design",
+    "system icons",
+    "svg icons",
+    "react",
+    "react-component",
+    "react component",
+    "svg",
+    "icons"
+  ],
+  "author": {
+    "name": "Eugene Iliyn",
+    "email": "eugene.ilyin@gmail.com"
+  },
+  "homepage": "https://github.com/eugeneilyin/mdi-norm",
+  "bugs": "https://github.com/eugeneilyin/mdi-norm/issues",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.js",
+  "repository": "github:eugeneilyin/mdi-norm",
+  "unpkg": "lib/index.js",
+  "files": [
+    "lib/",
+    "es/"
+  ],
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run cjs && npm run es",
+    "cjs": "rimraf lib && cross-env NODE_ENV=production npx babel src -d lib --copy-files",
+    "es": "rimraf es && cross-env NODE_ENV=es npx babel src -d es --copy-files",
+    "test": "jest --clearCache && jest",
+    "logoutHelpers": "rimraf lib && cross-env NODE_ENV=helpers npx babel src -d lib",
+    "extractHelpers": "babel-external-helpers -t var -l inherits,extends,hasOwnProperty,getPrototypeOf,possibleConstructorReturn,createClass,classCallCheck,objectWithoutProperties,interopRequireDefault > ./src/utils/$babelHelpers.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "private": false,
+  "dependencies": {
+    "preact": "8.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=0.14.0 || >=15.0.0-0 || >=16.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0",
+    "@babel/core": "^7.0",
+    "@babel/preset-env": "^7.0",
+    "@babel/preset-react": "^7.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4",
+    "cross-env": "^5.0",
+    "enzyme": "^3.7",
+    "enzyme-adapter-react-16": "^1.6",
+    "jest": "^23.6",
+    "path": "^0.12.7",
+    "prop-types": ">=15.6",
+    "react": ">=0.14",
+    "react-dom": "16.6",
+    "rimraf": "^2.6"
+  }
+}

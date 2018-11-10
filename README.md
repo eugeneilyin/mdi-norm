@@ -195,8 +195,8 @@ The icons required for RTL transformation are listed [here](https://google.githu
 **Decorative** icons are only being used for visual or branding reinforcement. 
 If they were removed from the page, users would still understand and be able to use your page. 
 
-**Semantic** icons (like FABs, menu items as icons only, icon buttons, etc.) are ones that youâ€™re using to convey meaning, rather than just pure decoration.
-This includes icons without text next to them used as interactive controls â€” buttons, form elements, toggles, etc.
+**Semantic** icons (like FABs, menu items as icons only, icon buttons, etc.) are ones that you’re using to convey meaning, rather than just pure decoration.
+This includes icons without text next to them used as interactive controls — buttons, form elements, toggles, etc.
 
 By default all icons are rendered as decorative icons with ``aria-hidden`` attribute added to svg HTML element:
 
@@ -206,7 +206,7 @@ By default all icons are rendered as decorative icons with ``aria-hidden`` attri
 <svg/>  
 ```
 
-If your icons have semantic meaning, youâ€™ll need to manually specify `title` prop with related meaning.
+If your icons have semantic meaning, you’ll need to manually specify `title` prop with related meaning.
 For example `<IconCakeRounded title="Add birthday reminder" ... />` icon will be rendered as:
 
 ```jsx

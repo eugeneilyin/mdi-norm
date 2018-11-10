@@ -1,0 +1,9 @@
+import { createThemedIcon } from './utils/createThemedIcon'
+import { IconAssistantFilled } from './IconAssistantFilled'
+import { IconAssistantOutlined } from './IconAssistantOutlined'
+import { IconAssistantRounded } from './IconAssistantRounded'
+import { IconAssistantSharp } from './IconAssistantSharp'
+import { IconAssistantTwoTone } from './IconAssistantTwoTone'
+
+export const IconAssistant = /*#__PURE__*/ props =>
+  createThemedIcon(props, IconAssistantFilled, IconAssistantOutlined, IconAssistantRounded, IconAssistantSharp, IconAssistantTwoTone)
