@@ -1,6 +1,6 @@
 {
   "name": "mdi-norm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fixed, normalized, minifed, and deduplicated Material Design system SVG icons for React",
   "license": "MIT",
   "keywords": [
@@ -29,7 +29,6 @@
     "es/"
   ],
   "scripts": {
-    "prepublish": "npm run build",
     "build": "npm run cjs && npm run es",
     "cjs": "rimraf lib && cross-env NODE_ENV=production npx babel src -d lib --copy-files",
     "es": "rimraf es && cross-env NODE_ENV=es npx babel src -d es --copy-files",
@@ -41,9 +40,7 @@
     "testEnvironment": "node"
   },
   "private": false,
-  "dependencies": {
-    "preact": "8.3.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": ">=0.14.0 || >=15.0.0-0 || >=16.0.0-0"
   },
