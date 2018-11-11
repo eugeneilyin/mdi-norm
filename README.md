@@ -7,8 +7,15 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 <hr />
 
-[![npm version](https://img.shields.io/npm/v/mdi-norm.svg?style=flat)](https://www.npmjs.com/package/mdi-norm)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/eugeneilyin/mdi-norm/blob/master/LICENSE)
+[![Build Status][build-badge]][build]
+[![npm version][npm-version-badge]][npm-version]
+[![GitHub license][lib-license-badge]][lib-license]
+
+[![PRs Welcome][prs-badge]][prs]
+[![Code of Conduct][coc-badge]][coc]
+
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
 
 ## The problem
 
@@ -351,8 +358,15 @@ Every release, along with the migration instructions, is documented on the GitHu
 
 ## Contributors
 
+Thanks goes to these people ([emoji key][emojis]):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+<!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/14204888?s=460&v=4" width="100px;"/><br /><sub><b>Eugene Iliyn</b></sub>](https://github.com/eugeneilyin)<br /> [💻](https://github.com/eugeneilyin/mdi-norm/commits?author=eugeneilyin "Code") [📖](https://github.com/eugeneilyin/mdi-norm/commits?author=eugeneilyin "Documentation") [⚠️](https://github.com/eugeneilyin/mdi-norm/commits?author=eugeneilyin "Tests") |
 | :---: |
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification. Contributions of any kind are welcome!
 
@@ -365,6 +379,16 @@ MIT
 [duplicates]: http://htmlpreview.github.io/?https://github.com/eugeneilyin/mdi-norm/blob/master/docs/duplicates.html
 [npm]: https://www.npmjs.com
 [node]: https://nodejs.org
+[npm-version-badge]: https://img.shields.io/npm/v/mdi-norm.svg?style=flat
+[npm-version]: https://www.npmjs.com/package/mdi-norm
+[lib-license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[lib-license]: https://github.com/eugeneilyin/mdi-norm/blob/master/LICENSE
+[build-badge]: https://img.shields.io/travis/eugeneilyin/mdi-norm.svg?style=flat
+[build]: https://travis-ci.org/eugeneilyin/mdi-norm
+[github-watch-badge]: https://img.shields.io/github/watchers/eugeneilyin/mdi-norm.svg?style=social
+[github-watch]: https://github.com/eugeneilyin/mdi-norm/watchers
+[github-star-badge]: https://img.shields.io/github/stars/eugeneilyin/mdi-norm.svg?style=social
+[github-star]: https://github.com/eugeneilyin/mdi-norm/stargazers
 [icon-fonts-vs-svg]: https://css-tricks.com/icon-fonts-vs-svg
 [ssim]: https://en.wikipedia.org/wiki/Structural_similarity
 [camel-case]: https://en.wikipedia.org/wiki/Camel_case
@@ -374,3 +398,9 @@ MIT
 [semver]: http://semver.org/
 [releases]: https://github.com/eugeneilyin/mdi-norm/releases
 [all-contributors]: https://github.com/kentcdodds/all-contributors
+[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
+[prs]: http://makeapullrequest.com
+[coc-badge]: https://img.shields.io/badge/code%20of-conduct-orange.svg?style=flat
+[coc]: https://js.foundation/community/code-of-conduct
+
