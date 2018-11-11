@@ -9,6 +9,7 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 [![Build Status][build-badge]][build]
 [![npm version][npm-version-badge]][npm-version]
+[![npm downloads][npm-downloads-badge]][npm-downloads]
 [![GitHub license][lib-license-badge]][lib-license]
 
 [![PRs Welcome][prs-badge]][prs]
@@ -236,7 +237,7 @@ html[dir="rtl"] .icon {
 
 The icons required for RTL transformation are listed [here][icons-in-rtl].
 
-### Accessibility: Decorative and Semantic icons
+### Decorative and Semantic icons
 
 **Decorative** icons are only being used for visual or branding reinforcement. 
 If they were removed from the page, users would still understand and be able to use your page. 
@@ -404,4 +405,6 @@ MIT
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-orange.svg?style=flat
 [coc]: https://js.foundation/community/code-of-conduct
-[contributors-badge]: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square
+[contributors-badge]: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat
+[npm-downloads-badge]: https://img.shields.io/npm/dm/mdi-norm.svg?style=flat
+[npm-downloads]: https://www.npmjs.com/package/mdi-norm
