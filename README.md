@@ -12,7 +12,7 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 ## The problem
 
-Standart Google material design SVG icons have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output.
+Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output.
 
 ## This solution
 
@@ -69,14 +69,14 @@ Compared to official Google system icon set the next fixes, normalization, minif
 
 * Direct SVG content fixes related to icons rendering: hardcoded opacity, whole-area-filled rectangles, hardcoded fill color, etc. (see all fixed issues [here][issues])
 * Removed all elements and attributes not related to rendering, reorder attributes, flattening groups (see all 5,421 optimizations [here][optimizations])
-* Identified 1,966 duplicated icons (about ~38%, details [here][duplicates]) in 5,220 icons based on:
+* Identified 1,966 duplicates (about ~38%, details [here][duplicates]) in 5,220 icons based on:
   * Duplicates from equal SVG-code after clearing, normalization, and reordering of SVG elements and attributes
   * Duplicates from same pixels rendering for _different_ SVG-code
   * Duplicates from [Structural Similarity (SSIM)][ssim] cross-validation and compare
   * Duplicates from Visual Similarity computation, sorting and cross-validation for the rest of unique icons for deeper duplicated identification
 * All duplicated icons use only the **most compact** SVG code representation
 * Manual SVG-code fixes for cases where render coordinates are not pixel-aligned with Google material design icon keylines
-> Note: If you take all 1,044 icons from any of five themes after deduplication - icons takes about ~55Kb of GZipped size which is comparable with material-icons.woff (~57Kb) of material-icons.woff2 (~44Kb). Considering that you never require all of provided 1,044 icons in your bundle this SVG solutions is better optimized then any icon-font approach.
+> Note: If you take all 1,044 icons from any of five themes in this library they will weight about ~55Kb gzipped which is comparable with material-icons.woff (~57Kb) of material-icons.woff2 (~44Kb) icon fonts. Consider that you never require all of provided 1,044 icons in your bundle this SVG solutions is better optimized then any icon-font approach.
 
 ## Usage
 
@@ -370,7 +370,7 @@ MIT
 [camel-case]: https://en.wikipedia.org/wiki/Camel_case
 [icon-color]: https://material.io/design/iconography/system-icons.html#color
 [icons-in-rtl]: https://google.github.io/material-design-icons/#icons-in-rtl
-[google-md-icons]: https://material.io/tools/icons/?icon=fitness_center&style=baseline
+[google-md-icons]: https://material.io/tools/icons
 [semver]: http://semver.org/
 [releases]: https://github.com/eugeneilyin/mdi-norm/releases
 [all-contributors]: https://github.com/kentcdodds/all-contributors
