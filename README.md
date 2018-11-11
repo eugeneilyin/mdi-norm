@@ -12,6 +12,7 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 [![GitHub license][lib-license-badge]][lib-license]
 
 [![PRs Welcome][prs-badge]][prs]
+[![All Contributors][contributors-badge]](#contributors)
 [![Code of Conduct][coc-badge]][coc]
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
@@ -403,4 +404,4 @@ MIT
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-orange.svg?style=flat
 [coc]: https://js.foundation/community/code-of-conduct
-
+[contributors-badge]: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square
