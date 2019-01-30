@@ -1,7 +1,7 @@
 export const createThemedIcon = /*#__PURE__*/
-  ({ theme, ...rest }, filled, outlined, rounded, sharp, twoTone) =>
-    theme === 'outlined' ? outlined(rest) :
-      theme === 'rounded' ? rounded(rest) :
+  ({ theme, ...rest }, filled, outline, round, sharp, twoTone) =>
+    theme === 'outline' ? outline(rest) :
+      theme === 'round' ? round(rest) :
         theme === 'sharp' ? sharp(rest) :
           theme === 'two-tone' ? twoTone(rest) :
             filled(rest)

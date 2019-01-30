@@ -1,0 +1,6 @@
+import { createElement as h } from 'react'
+import { Icon } from './Icon'
+
+export const SharpSmsFailed = /*#__PURE__*/ props => <Icon {...props}>
+  <path d="M22 2H2v20l4-4h16zm-9 12h-2v-2h2zm0-4h-2V6h2z"/>
+</Icon>

@@ -1,2 +1,0 @@
-import { IconSignalCellularConnectedNoInternet3BarOutlined as IconSignalCellularConnectedNoInternet3BarTwoTone } from './IconSignalCellularConnectedNoInternet3BarOutlined';
-export { IconSignalCellularConnectedNoInternet3BarTwoTone };

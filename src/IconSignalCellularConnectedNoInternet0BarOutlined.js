@@ -1,2 +1,0 @@
-import { IconSignalCellularConnectedNoInternet0BarFilled as IconSignalCellularConnectedNoInternet0BarOutlined } from './IconSignalCellularConnectedNoInternet0BarFilled'
-export { IconSignalCellularConnectedNoInternet0BarOutlined }

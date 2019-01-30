@@ -1,0 +1,2 @@
+import { FilledSignalCellularConnectedNoInternet0Bar as OutlineSignalCellularConnectedNoInternet0Bar } from './FilledSignalCellularConnectedNoInternet0Bar'
+export { OutlineSignalCellularConnectedNoInternet0Bar }

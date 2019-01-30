@@ -1,0 +1,2 @@
+import { FilledSignalCellularConnectedNoInternet0Bar as TwoToneSignalCellularConnectedNoInternet0Bar } from './FilledSignalCellularConnectedNoInternet0Bar'
+export { TwoToneSignalCellularConnectedNoInternet0Bar }

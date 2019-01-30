@@ -1,11 +1,11 @@
 import { createThemedIcon } from './utils/createThemedIcon';
-import { Icon4KFilled } from './Icon4KFilled';
-import { Icon4KOutlined } from './Icon4KOutlined';
-import { Icon4KRounded } from './Icon4KRounded';
-import { Icon4KSharp } from './Icon4KSharp';
-import { Icon4KTwoTone } from './Icon4KTwoTone';
+import { Filled4K } from './Filled4K';
+import { Outline4K } from './Outline4K';
+import { Round4K } from './Round4K';
+import { Sharp4K } from './Sharp4K';
+import { TwoTone4K } from './TwoTone4K';
 export var Icon4K =
 /*#__PURE__*/
 function Icon4K(props) {
-  return createThemedIcon(props, Icon4KFilled, Icon4KOutlined, Icon4KRounded, Icon4KSharp, Icon4KTwoTone);
+  return createThemedIcon(props, Filled4K, Outline4K, Round4K, Sharp4K, TwoTone4K);
 };

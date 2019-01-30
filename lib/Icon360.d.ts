@@ -1,1 +1,1 @@
-export { default } from './utils/createThemedIcon';
+export { default as Icon360 } from './utils/createThemedIcon';

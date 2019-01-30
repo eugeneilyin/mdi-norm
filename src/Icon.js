@@ -40,12 +40,14 @@ export class Icon extends C {
   render() {
     const { component, title, fill, opacity, shade, state, size, viewBox, children, ...rest } = this.props
     let props = title != null ? { role: 'img', 'aria-label': 'title' } : { 'aria-hidden': true }
-    props.fill = fill != null ? fill : shade == null || shade === 'on-light'
-      ? state === 'error' ? '#B00020' : '#000000'
-      : state === 'error' ? '#FF6E6E' : '#FFFFFF'
-    props.opacity = opacity != null ? opacity : shade == null || shade === 'on-light'
-      ? state === 'focused' ? '.87' : state === 'active' ? '.54' : state === 'inactive' ? '.38' : state === 'error' ? '1' : '.54'
-      : state === 'focused' ? '1' : state === 'active' ? '.7' : state === 'inactive' ? '.5' : state === 'error' ? '1' : '.7'
+    props.fill = fill != null ? fill
+      : shade === 'on-light' ? state === 'error' ? '#B00020' : '#000000'
+        : shade === 'on-dark' ? state === 'error' ? '#FF6E6E' : '#FFFFFF'
+          : 'currentColor'
+    props.opacity = opacity != null ? opacity
+      : shade === 'on-light' ? state === 'focused' ? '.87' : state === 'active' ? '.54' : state === 'inactive' ? '.38' : state === 'error' ? '1' : undefined
+        : shade === 'on-dark' ? state === 'focused' ? '1' : state === 'active' ? '.7' : state === 'inactive' ? '.5' : state === 'error' ? '1' : undefined
+          : undefined
     props.width = props.height = size != null ? size : 24
     props.viewBox = viewBox != null ? viewBox : '0 0 24 24'
     return h(component != null ? component : 'svg', Object.assign(props, rest),

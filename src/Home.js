@@ -1,0 +1,9 @@
+import { createThemedIcon } from './utils/createThemedIcon'
+import { FilledHome } from './FilledHome'
+import { OutlineHome } from './OutlineHome'
+import { RoundHome } from './RoundHome'
+import { SharpHome } from './SharpHome'
+import { TwoToneHome } from './TwoToneHome'
+
+export const Home = /*#__PURE__*/ props =>
+  createThemedIcon(props, FilledHome, OutlineHome, RoundHome, SharpHome, TwoToneHome)

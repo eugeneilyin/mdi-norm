@@ -1,11 +1,11 @@
 import { createThemedIcon } from './utils/createThemedIcon';
-import { Icon360Filled } from './Icon360Filled';
-import { Icon360Outlined } from './Icon360Outlined';
-import { Icon360Rounded } from './Icon360Rounded';
-import { Icon360Sharp } from './Icon360Sharp';
-import { Icon360TwoTone } from './Icon360TwoTone';
+import { Filled360 } from './Filled360';
+import { Outline360 } from './Outline360';
+import { Round360 } from './Round360';
+import { Sharp360 } from './Sharp360';
+import { TwoTone360 } from './TwoTone360';
 export var Icon360 =
 /*#__PURE__*/
 function Icon360(props) {
-  return createThemedIcon(props, Icon360Filled, Icon360Outlined, Icon360Rounded, Icon360Sharp, Icon360TwoTone);
+  return createThemedIcon(props, Filled360, Outline360, Round360, Sharp360, TwoTone360);
 };

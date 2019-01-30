@@ -5,8 +5,11 @@
   "license": "MIT",
   "keywords": [
     "material design",
-    "system icons",
+    "material-icons",
+    "material icons",
     "svg icons",
+    "material-ui",
+    "system icons",
     "react",
     "react-component",
     "react component",
@@ -26,7 +29,8 @@
   "unpkg": "lib/index.js",
   "files": [
     "lib/",
-    "es/"
+    "es/",
+    "macro/"
   ],
   "scripts": {
     "build": "npm run cjs && npm run es",
