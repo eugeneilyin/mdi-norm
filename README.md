@@ -371,14 +371,14 @@ This gives you an ability to change icon themes dynamically with the `theme` pro
 | Icon | Equal themed icon | 
 | :--- | :--- |
 | `<FilledStar />` | `<Star theme="filled" />` or `<Star />` (by default) |
-| `<OutlineStar />` | `<Star theme="outlined" />` |
-| `<RoundStar />` | `<Star theme="rounded" />` |
+| `<OutlineStar />` | `<Star theme="outline" />` |
+| `<RoundStar />` | `<Star theme="round" />` |
 | `<SharpStar />` | `<Star theme="sharp" />` |
 | `<TwoToneStar />` | `<Star theme="two-tone" />` |
 
 You can explore all five themes on the official Google's material design [icon set][google-md-icons].
 
-Three exceptions exist in icon naming: use `<Icon4K />` instead of `<4K />`, `<Icon360 />` instead of `<360 />`, and `<Icon3DRotation />` instead of `<3DRotation />`. In all other cases you can use direct camel-cased icon name as is (e.g. `<Star />`, `<People />`, `<InsertComment />`)
+> Note: Three exceptions exist for direct import of icons: use `<Icon4K />` instead of `<4K />`, `<Icon360 />` instead of `<360 />`, and `<Icon3DRotation />` instead of `<3DRotation />`. In all other cases you can use direct camel-cased icon name as is (e.g. `<Star />`, `<People />`, `<InsertComment />`). If you use `babel-macros` the you can omit this rule and use `360`, `4K`, and `3DRotation` as icon name directly without prefix.
 
 ## Properties
 
