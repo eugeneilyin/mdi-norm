@@ -16,6 +16,8 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 [![All Contributors][contributors-badge]](#contributors)
 [![Code of Conduct][coc-badge]][coc]
 
+[![Babel Macro][babel-macro-badge]][babel-macros]
+
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
 
@@ -137,8 +139,6 @@ Or if you have to use CommonJS approach:
 const i = require("mdi-norm/macro");
 ```
 
-> Note: You can use any name for JSX tag instead of `i` the `Icon`, or `MDI` or anything else is also supported.
-
 Then place any icons in you code and all import/requires will be added automatically.
 For eaxample the `missed_video_call` icon can be specified by the next syntax contructions (choose you preferred way):
 
@@ -167,11 +167,32 @@ All the examples above will be transpiled to `<MissedVideoCall />` component and
 import { MissedVideoCall } from 'mdi-norm/es/MissedVideoCall'
 
 // or in you specifies macros as CommonJS required
-const MissedVideoCall = require("mdi-norm/es/MissedVideoCall");
+const MissedVideoCall = require("mdi-norm/lib/MissedVideoCall");
 ```
 will be automatically added into import section.
 
 So with this macros you can easily migrate you old code base with icon fonts and tags like `<i className="material-icons">star</i>`to the new SVG components automatically.
+
+> Note: You can use any name for JSX tag instead of `i` the `Icon`, or `MDI` or anything else is also supported.
+
+```jsx
+import Icon from 'mdi-norm/macro'
+...
+
+export const MyComponent = ({text}) => (
+  <div>
+    <Icon name="sharp-location-searching" className="icon"/>
+    My Component
+  </div>);
+```
+
+You can pass icons as parameters:
+
+```jsx
+import Icon from 'mdi-norm/macro'
+...
+<MyComponent icon={Icon`markunread mailbox`} title="My Title"/>
+```
 
 ### Direct icons import
 
@@ -473,6 +494,7 @@ MIT
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
 [prs]: http://makeapullrequest.com
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-orange.svg?style=flat
+[babel-macro-badge]: https://img.shields.io/badge/babel--macro-%F0%9F%8E%A3-f5da55.svg?style=flat
 [coc]: https://js.foundation/community/code-of-conduct
 [contributors-badge]: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat
 [npm-downloads-badge]: https://img.shields.io/npm/dm/mdi-norm.svg?style=flat
