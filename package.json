@@ -14,7 +14,9 @@
     "react-component",
     "react component",
     "svg",
-    "icons"
+    "icons",
+    "babel-plugin",
+    "babel-plugin-macros"
   ],
   "author": {
     "name": "Eugene Iliyn",
