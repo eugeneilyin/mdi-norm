@@ -25,7 +25,7 @@ Standart Google material design [SVG icons][google-md-icons] have lot of drawing
 
 ## This solution
 
-This `mdi-norm` library allows you to embed material design system SVG icons as React components and ensure that only minimal deduplicated SVG code will be included. No external dependencies used, you can override default component with your own and use any favorite css solution to customize icon styles. Special icon properties provided to handle standart material design icon rendering.
+This `mdi-norm` library allows you to embed material design system SVG icons as React components and ensure that only minimal deduplicated SVG code will be included. No external dependencies used, you can override default component with your own and use any favorite css solution to customize icon styles. As an alternative to `css` customization the `shade` and `state` icon properties provided to handle standart material design icon rendering (active, focused, inactive, or error).
 
 ## Table of Contents
 
@@ -33,7 +33,8 @@ This `mdi-norm` library allows you to embed material design system SVG icons as 
 * [Benefits](#benefits)
 * [Fixes and Optimizations](#fixes-and-optimizations)
 * [Usage](#usage)
-  * [Import icons](#import-icons)
+  * [With babel macros](#with-babel-macros)
+  * [Direct icons import](#direct-icons-import)
   * [Customization](#customization)
   * [Styling](#styling)
   * [Decorative and Semantic icons](#decorative-and-semantic-icons)
@@ -63,54 +64,129 @@ npm install --save mdi-norm
 
 * Doesn't depends on any external libraries like `@babel/runtime`
 * Tiny base `<Icon />` component overhead (**2,360** bytes minified / **858** bytes gzipped)
-* The same codbase used for all icon duplicates which gives _~40%_ SVG code reduction in average
-* Code optimized to reduce bundle overhead (special pure function annotations, code reusage, tiny helpers)
-* Dynamic theming support for _filled_, _outlined_, _rounded_, _sharp_, and _two-tone_ icon variants (see [themed icons](#themed-icons))
-* No `className` prop usage, you can use library with any css framework, library or vanilla css
-* Own optimized rendering **NOT** based on `React.PureComponent` or `_pure` from recompose (both approaches are ineffective for icons because always re-render even if props were not changed due to internal createElement calls for `children` prop)
-* All [benefits][icon-fonts-vs-svg] of **Inline SVG** compared to **Icon Fonts**
-* Your SVG icons will be included into bundle, which is not require separate icon-font file request and load
+* The same codbase is used for all icon duplicates which gives _~40%_ SVG code reduction in average
+* Dynamic theming support for _filled_, _outline_, _round_, _sharp_, and _two-tone_ icon variants (see [themed icons](#themed-icons))
+* No `className` prop used, you can use icons with any css framework, style library or vanilla css
 * Accessibility complaint with **WAI-ARIA** (see [decorative and semantic icons](#decorative-and-semantic-icons))
+* Own optimized rendering **NOT** based on `React.PureComponent` or `_pure` from recompose (both approaches are ineffective for icons because always re-render even if props were not changed due to internal createElement calls for `children` prop)
+* Your SVG icons will be included into bundle, which is not require separate icon-font file request and load
+* React components code is optimized to reduce a bundle overhead (special pure function annotations, code reusage, tiny helpers)
+* All [benefits][icon-fonts-vs-svg] of **Inline SVG** compared to **Icon Fonts**
 
 ## Fixes and Optimizations
 
-Compared to official Google system icon set the next fixes, normalization, minification, and de-duplications provided:
+Compared to the official Google system icon set the next fixes, normalization, minification, and de-duplications provided:
 
-* Direct SVG content fixes related to icons rendering: hardcoded opacity, whole-area-filled rectangles, hardcoded fill color, etc. (see all fixed issues [here][issues])
+* SVG code fixes: hardcoded opacity, whole-area-filled rectangles, hardcoded fill color, etc. (see all fixed issues [here][issues])
 * Removed all elements and attributes not related to rendering, reorder attributes, flattening groups (see all 5,421 optimizations [here][optimizations])
-* Identified 1,966 duplicates (about ~38%, details [here][duplicates]) in 5,220 icons based on:
+* Deep `<path>` elements draw commands elimination by removing all commands not involved in pixels rendering
+* Identified 1,994 duplicates (about ~38%, details [here][duplicates]) in 5,220 icons based on:
   * Duplicates from equal SVG-code after clearing, normalization, and reordering of SVG elements and attributes
   * Duplicates from same pixels rendering for _different_ SVG-code
   * Duplicates from [Structural Similarity (SSIM)][ssim] cross-validation and compare
   * Duplicates from Visual Similarity computation, sorting and cross-validation for the rest of unique icons for deeper duplicated identification
 * All duplicated icons use only the **most compact** SVG code representation
 * Manual SVG-code fixes for cases where render coordinates are not pixel-aligned with Google material design icon keylines
-> Note: If you take all 1,044 icons from any of five themes in this library they will weight about ~55Kb gzipped which is comparable with material-icons.woff (~57Kb) of material-icons.woff2 (~44Kb) icon fonts. Consider that you never require all of provided 1,044 icons in your bundle this SVG solutions is better optimized then any icon-font approach.
 
 ## Usage
 
-Every icon name is prefixed with `Icon` followed by the original name in [Camel Case][camel-case] notation with one of five **optional** theme postfixes at the end.
+Every icon name is prefixed with one of five available themes (`Filled`, `Outline`, `Round`, `Sharp`, or `TwoTone`)  followed by the original name in [Camel Case][camel-case] notation. 
 
-For example original `kitchen` icon from **filled** theme becomes `IconKitchenFilled`.
-Another example is `fitness_center` icon from **two-tone** theme is exported as `IconFitnessCenterTwoTone` and so on.
+For example original `kitchen` icon from **filled** theme becomes `FilledKitchen`.
+Another example is `fitness_center` icon from **two-tone** theme is exported as `TwoToneFitnessCenter` and so on.
 
-> Note: One name exception exist: insert_chart_outline**d** icon is named as `IconInsertChartOutline` (without `d` at the end)
+If you omit prefix and use direct icon name (like `FitnessCenter` in the example above) then used theme can be specified by `theme` prop. See [themed icons](#themed-icons) for details.
 
-### Import icons
+### With Babel macros
+
+Imagine that we need five icons to render some component: two dynamically themed icons `<Star />`, `<People />` and three icons from the concrete themes `<RoundCake />`, `<SharpAdd />`, and `<TwoToneBatteryAlert />`.
+
+With direct import approach you have to write lot of boilerplate code to use them:
+
+```jsx
+// Import required icon components
+import { Star } from 'mdi-norm/es/Star'
+import { People } from 'mdi-norm/es/People'
+import { RoundCake } from 'mdi-norm/es/RoundCake'
+import { SharpAdd } from 'mdi-norm/es/SharpAdd'
+import { TwoToneBatteryAlert } from 'mdi-norm/es/TwoToneBatteryAlert'
+...
+// Then use them
+export const MyComponent = () => 
+  <>
+    <Star theme="outline" />
+    <People theme="two-tone" shade="on-light" state="active"/>
+    <RoundCake size={48} />
+    <SharpAdd title="Add new item" />
+    <TwoToneBatteryAlert fill="#F00" />
+  </>;
+```
+
+This is boring, and error prone. To have a better development experience the [Babel Macros][babel-macros] is provided with this library. This makes possible to run Babel transforms without changing a Babel config. The Create React App v2 is already contains babel macros in .babelc file.
+
+With `mdi-norm/macro` all necessary icon imports will be provided automatically - the code will be transpiled before compilation.
+All you need is just add macro to you import section:
+
+```jsx
+import i from 'mdi-norm/macro'
+```
+
+Or if you have to use CommonJS approach:
+
+```jsx
+const i = require("mdi-norm/macro");
+```
+
+> Note: You can use any name for JSX tag instead of `i` the `Icon`, or `MDI` or anything else is also supported.
+
+Then place any icons in you code and all import/requires will be added automatically.
+For eaxample the `missed_video_call` icon can be specified by the next syntax contructions (choose you preferred way):
+
+```jsx
+// As a tag with icon name
+<i className="material-icons" theme="ouline">missed_video_call</i> // With underscore (standart icon name)
+<i className="icon" size={48}>    filled missed video call  </i>   // With spaces
+<i className="icon" size={48}>filled-missed-video-call</i>         // With dashes
+<i shade="on-light" state="error">TwoToneMissedVideoCall</i>       // With cames case notation
+
+// As a self-closed tag with the name property
+<i name="missed_video_call" theme="two-tone" />
+<i name="outline-missed-video-call" title="Missed call" />
+
+// As a string literal
+i`missed_video_call`({theme: "sharp", size: "2em"})
+i`filled-missed-video-call`
+i`SharpMissedVideoCall`
+
+// As a function call
+i('TwoTone missed-video_call', {className: 'material-icon', shade: 'on-dark', state: 'inactive'});
+```
+
+All the examples above will be transpiled to `<MissedVideoCall />` component and 
+```jsx
+import { MissedVideoCall } from 'mdi-norm/es/MissedVideoCall'
+
+// or in you specifies macros as CommonJS required
+const MissedVideoCall = require("mdi-norm/es/MissedVideoCall");
+```
+will be automatically added into import section.
+
+So with this macros you can easily migrate you old code base with icon fonts and tags like `<i className="material-icons">star</i>`to the new SVG components automatically.
+
+### Direct icons import
 
 The best way for fast compilation time and tree shaking is to use direct import of required ES icon files from `mdi-norm/es/` path:
 
 > Note: Pay attention to brackets, default import is not used
 
 ```jsx
-import React from 'react'
-import { IconMood as Mood } from 'mdi-norm/es/IconMood'
-import { IconRoomServiceTwoTone } from 'mdi-norm/es/IconRoomServiceTwoTone'
-import { IconRoomServiceRounded } from 'mdi-norm/es/IconRoomServiceRounded'
+import { Mood } from 'mdi-norm/es/IconMood'
+import { TwoToneRoomService } from 'mdi-norm/es/TwoToneRoomService'
+import { RoundRoomService } from 'mdi-norm/es/RoundRoomService'
 
 <Mood theme="sharp" />
-<IconRoomServiceTwoTone />
-<IconRoomServiceRounded />
+<TwoToneRoomService />
+<RoundeRoomService />
 ```
 
 You also could use `mdi-norm` package directly for icons import, but this can slow down bundle compilation time.
@@ -118,59 +194,57 @@ Also this require tree shaking of your bundler (Webpack/Rollup has such feature)
 
 ```jsx
 // Import concrete icons from package (not recomended, use direct import)
-import React from 'react'
-import { IconPeople as People, IconSpaTwoTone, IconCakeRounded } from 'mdi-norm'
+import { People, TwoToneSpa, RoundCake } from 'mdi-norm'
 
 <People theme="sharp" />
-<IconSpaTwoTone />
-<IconCakeRounded />;
+<TwoToneSpa />
+<RoundCake />;
 ```
 
 You can take **CommonJS** classes from `mdi-norm/lib/` path:
 
 ```jsx
-const React = require('react');
-const { IconMood: Mood } = require('mdi-norm/lib/IconMood');
-const { IconRoomServiceTwoTone } = require('mdi-norm/lib/IconRoomServiceTwoTone');
-const { IconRoomServiceRounded } = require('mdi-norm/lib/IconRoomServiceRounded');
+const { Mood } = require('mdi-norm/lib/Mood');
+const { TwoToneRoomService } = require('mdi-norm/lib/TwoToneRoomService');
+const { RoundRoomService } = require('mdi-norm/lib/RoundRoomService');
 
-<Mood theme="outlined" />
-<IconRoomServiceTwoTone />
-<IconRoomServiceRounded />
+<Mood theme="outline" />
+<TwoToneRoomService />
+<RoundRoomService />
 ```
 
-Also you can import all 6264 icon classes into your bundle (**NOT** recomended):
+Also you can import all 6264 icon classes into your bundle (**NOT** recomended, due to long compilation time):
 
 ```jsx
 // Import all icons from package (not recomended at all)
-import React from 'react'
 import * as MDI from 'mdi-norm'
 
-<MDI.IconSpaTwoTone />
+<MDI.Spa theme="ouline"/>
+<MDI.TwoToneStar />
 ```
 
 ### Customization
 
 You can change any SVG HTML element property to adjust icon rendering.
-To specify `width` and `height` props simultaneously the `size` prop was added (equals to 24 pixels by default).
+To specify `width` and `height` props simultaneously the `size` prop is used (the default size is `24px`).
 
 ```jsx
 // size property change
-<IconSchoolFilled size={48} />
+<FilledSchool size={48} />
 
 // is equal to 
-<IconSchoolFilled width={48} height={48} />
+<FilledSchool width={48} height={48} />
 
 // you can use not only numbers
-<IconSchoolFilled size="3rem" />
+<FilledSchool size="3rem" />
 ```
 
-To be aligned with material design [icon color][icon-color] guidelines the default `fill` and `opacity` icons props can be specified by  `state` and `shade` prop values:
+To be aligned with material design [icon color][icon-color] guidelines the `fill` and `opacity` SVG props can be specified by `state` and `shade` prop values:
 
-| | `shade="on-light"` **(default)** | `shade="on-dark"` |
+| | `shade="on-light"` | `shade="on-dark"` |
 | :--- | :---- | :---- |
 | `state="focused"` | `opacity=".87"`, `fill="#000000"` | `opacity="1"`, `fill="#FFFFFF"` |
-| `state="active"` **(default)** | `opacity=".54"`, `fill="#000000"` | `opacity=".7"`, `fill="#FFFFFF"` |
+| `state="active"` | `opacity=".54"`, `fill="#000000"` | `opacity=".7"`, `fill="#FFFFFF"` |
 | `state="inactive"` | `opacity=".38"`, `fill="#000000"` | `opacity=".5"`, `fill="#FFFFFF"` |
 | `state="error"` | `opacity="1"`, `fill="#B00020"` | `opacity="1"`, `fill="#FF6E6E"` |
 
@@ -178,7 +252,22 @@ To be aligned with material design [icon color][icon-color] guidelines the defau
 
 Use any `className` or `style` props to override icon fill, opacity with any of your favorite css framework or library:
 
-For icon coloring the `fill` SVG property is used:
+By default the `fill` SVG property is queal to `currentColor` - this allows you to change icon color by specifing `color` css property, instead of `fill`.
+
+```css
+/* some .css file */
+.people-icon {
+  color: 'blue';
+}
+```
+
+```jsx
+import i from 'mdi-norm/macro'
+...
+<i className="people-icon">sharp people</i>
+```
+
+But you can use `fill` property directly:
 
 ```css
 /* some .css file */
@@ -187,13 +276,7 @@ For icon coloring the `fill` SVG property is used:
 }
 ```
 
-```jsx
-import { IconPeopleSharp } from 'mdi-norm/es/IconPeopleSharp'
-
-<IconPeopleSharp className="people-icon" />
-```
-
-The same approach applied to override default icon opacity or any other SVG HTML Element property:
+The same approach is applied to override the default icon opacity or any other SVG HTML Element property:
 
 ```css
 .nav-drawer li a:hover .icon,
@@ -203,22 +286,6 @@ The same approach applied to override default icon opacity or any other SVG HTML
     height: 1.5rem;
     width: 1.5rem;
     transform: rotate(-2deg);
-}
-```
-
-If you want your icon to be colored as the outer text use `currentColor` value:
-
-```css
-svg {
-  fill: currentColor;
-}
-```
-
-or 
-
-```css
-svg.my-special-icon {
-  fill: currentColor;
 }
 ```
 
@@ -253,7 +320,7 @@ By default all icons are rendered as decorative icons with ``aria-hidden`` attri
 ```
 
 If your icons have semantic meaning, you'll need to manually specify `title` prop with related meaning.
-For example `<IconCakeRounded title="Add birthday reminder" ... />` icon will be rendered as:
+For example `<RoundCake title="Add birthday reminder" ... />` icon will be rendered as:
 
 ```jsx
 <svg role="img" aria-label="title" ...>
@@ -264,32 +331,33 @@ For example `<IconCakeRounded title="Add birthday reminder" ... />` icon will be
 
 ### Pass icons as props
 
-If you want to pass icon as prop to another component or function for rendering make sure that you use upper case first letter in prop name to distinct icon from from standart HTML components:
+If you want to pass icon as prop to another component or function for rendering make sure that you use upper case first letter in prop name to distinct icon from from standart JSX HTML elements:
 
 ```jsx
-import React from 'react'
-import { IconCakeSharp } from 'mdi-norm/es/IconCakeSharp'
+import { SharpCake } from 'mdi-norm/es/SharpCake'
 
 const MyCoolLink = ({icon: Icon, text, href}) => <a href={href}><Icon />{text}</a>;
 
-<MyCoolLink icon={IconCakeSharp} text="Cool button" href="/cool" />
+<MyCoolLink icon={SharpCake} text="Cool button" href="/cool" />
 ```
 
 ### Themed icons
 
 By default if no icon theme postfix provided all five themes exported in one React component (usually this is less then five different SVG code bases, due to many existing dulicates of the same icon in different themes).
 
-This gives you an ability to change icon themes dynamically with `theme` prop:
+This gives you an ability to change icon themes dynamically with the `theme` prop:
 
 | Icon | Equal themed icon | 
 | :--- | :--- |
-| `<Icon360Filled />` | `<Icon360 theme="filled" />` or `<Icon360 />` (by default) |
-| `<Icon360Outlined />` | `<Icon360 theme="outlined" />` |
-| `<Icon360Rounded />` | `<Icon360 theme="rounded" />` |
-| `<Icon360Sharp />` | `<Icon360 theme="sharp" />` |
-| `<Icon360TwoTone />` | `<Icon360 theme="two-tone" />` |
+| `<FilledStar />` | `<Star theme="filled" />` or `<Star />` (by default) |
+| `<OutlineStar />` | `<Star theme="outlined" />` |
+| `<RoundStar />` | `<Star theme="rounded" />` |
+| `<SharpStar />` | `<Star theme="sharp" />` |
+| `<TwoToneStar />` | `<Star theme="two-tone" />` |
 
 You can explore all five themes on the official Google's material design [icon set][google-md-icons].
+
+Three exceptions exist in icon naming: use `<Icon4K />` instead of `<4K />`, `<Icon360 />` instead of `<360 />`, and `<Icon3DRotation />` instead of `<3DRotation />`. In all other cases you can use direct camel-cased icon name as is (e.g. `<Star />`, `<People />`, `<InsertComment />`)
 
 ## Properties
 
@@ -305,29 +373,30 @@ Examples: `48`, `"16px"`, `"2em"`
 
 ### `state`
 
-`"focused" | "active" | "inactive" | "error"`, defaults to `"active"`.
+`"focused" | "active" | "inactive" | "error"`
 
 Define icon `fill` and `opacity` aligned with material design [icon color][icon-color] guidelines.
 
 ### `shade`
 
-`"on-light" | "on-dark"`, defaults to `"on-light"`.
+`"on-light" | "on-dark"`
 
 Define icon `fill` and `opacity` aligned with material design [icon color][icon-color] guidelines.
 
 ### `fill`
 
-`string`, defaults to `#000000` or `#FFFFFF` depends on `state` and `shade` props.
+`string`, defaults to `"currentColor"`.
 
-Define icon's color, by default depends on material design [icon color][icon-color] guidelines.
+Define icon's color, by default equals to css `color` prop.
+Can be customized by the `state` and `shade` props.
 
 Examples: `"rgb(255, 255, 0)"`, `"rgba(0, 255, 0, 0.3)"`, `"#000"`, `"#000000"`
 
 ### `opacity`
 
-`string`, default to `".54"` or `".7"` depends on on `state` and `shade` props.
+`string`, defaults to `undefined`, can be customized by the `state` and `shade` props.
 
-Defines icon's opacity, by default depends on material design [icon color][icon-color] guidelines.
+Defines icon's opacity, depends on material design [icon color][icon-color] guidelines.
 
 Examples: `"1"`, `".87"`, `".54"`
 
@@ -349,9 +418,9 @@ Examples: `"div"`, `"span"`, `React.Fragment`
 
 ### `theme`
 
-`"filled" | "outlined" | "rounded" | "sharp" | "two-tone"`, defaults to `"filled"`
+`"filled" | "outline" | "round" | "sharp" | "two-tone"`, defaults to `"filled"`
 
-Specified icon theme used for rendering. Only icon classes without theme specification on the end supports this property to give you dynamic theme changing on production (see [themed icons][#themed-icons] for details)
+Specified icon theme used for rendering. Only icon classes without theme prefixes supports this property to give you dynamic theme changing on production (see [themed icons][#themed-icons] for details)
 
 ## Change Log
 
@@ -408,3 +477,4 @@ MIT
 [contributors-badge]: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat
 [npm-downloads-badge]: https://img.shields.io/npm/dm/mdi-norm.svg?style=flat
 [npm-downloads]: https://www.npmjs.com/package/mdi-norm
+[babel-macros]: https://github.com/kentcdodds/babel-plugin-macros
