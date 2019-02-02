@@ -15,7 +15,6 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 [![PRs Welcome][prs-badge]][prs]
 [![All Contributors][contributors-badge]](#contributors)
 [![Code of Conduct][coc-badge]][coc]
-
 [![Babel Macro][babel-macro-badge]][babel-macros]
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
@@ -140,14 +139,22 @@ const i = require("mdi-norm/macro");
 ```
 
 Then place any icons in you code and all import/requires will be added automatically.
-For eaxample the `missed_video_call` icon can be specified by the next syntax contructions (choose you preferred way):
+For example the `missed_video_call` icon can be specified by the next syntax contructions (choose you preferred way):
 
 ```jsx
-// As a tag with icon name
-<i className="material-icons" theme="ouline">missed_video_call</i> // With underscore (standart icon name)
-<i className="icon" size={48}>    filled missed video call  </i>   // With spaces
-<i className="icon" size={48}>filled-missed-video-call</i>         // With dashes
-<i shade="on-light" state="error">TwoToneMissedVideoCall</i>       // With cames case notation
+// As a JSX tag with icon name
+
+// With underscore (standart icon name)
+<i className="material-icons" theme="ouline">missed_video_call</i>
+
+// With spaces
+<i className="icon" size={48}>    filled missed video call  </i>
+
+// With dashes
+<i className="icon" size={48}>filled-missed-video-call</i>
+
+// With cames case notation
+<i shade="on-light" state="error">TwoToneMissedVideoCall</i>
 
 // As a self-closed tag with the name property
 <i name="missed_video_call" theme="two-tone" />
@@ -162,16 +169,18 @@ i`SharpMissedVideoCall`
 i('TwoTone missed-video_call', {className: 'material-icon', shade: 'on-dark', state: 'inactive'});
 ```
 
-All the examples above will be transpiled to `<MissedVideoCall />` component and 
+All the examples above will be transpiled to `<MissedVideoCall />` component and next import will be added:
 ```jsx
 import { MissedVideoCall } from 'mdi-norm/es/MissedVideoCall'
 
 // or in you specifies macros as CommonJS required
 const MissedVideoCall = require("mdi-norm/lib/MissedVideoCall");
 ```
-will be automatically added into import section.
 
-So with this macros you can easily migrate you old code base with icon fonts and tags like `<i className="material-icons">star</i>`to the new SVG components automatically.
+> Note: With this macros you can easily migrate to SVG from your old code based on icon fonts:
+> ```jsx
+> <i className="material-icons">star</i>
+> ``` 
 
 > Note: You can use any name for JSX tag instead of `i` the `Icon`, or `MDI` or anything else is also supported.
 
