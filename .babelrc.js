@@ -7,12 +7,13 @@ const getPresets = () => [
 
 const getPlugins = (modules, forProduction = true, logoutHelpers) => {
   const plugins = [
+    ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
     [importExternalHelpers, {
       modules,
       root: 'src',
       path: './utils/babelHelpers.js',
       logoutHelpers,
-      removeExportsInitialization: true,
+      removeExportsInitialization: true
     }]
   ]
   if (modules === 'commonjs') {

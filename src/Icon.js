@@ -50,7 +50,7 @@ export class Icon extends C {
           : undefined
     props.width = props.height = size != null ? size : 24
     props.viewBox = viewBox != null ? viewBox : '0 0 24 24'
-    return h(component != null ? component : 'svg', Object.assign(props, rest),
+    return h(component != null ? component : 'svg', { ...props, ...rest },
       title != null ? [h('title', { key: title }, title), children] : children)
   }
 }

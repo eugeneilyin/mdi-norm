@@ -1,4 +1,4 @@
-import { classCallCheck, createClass, getPrototypeOf, inherits, objectWithoutProperties, possibleConstructorReturn } from "./utils/babelHelpers.js";
+import { _extends, classCallCheck, createClass, getPrototypeOf, inherits, objectWithoutProperties, possibleConstructorReturn } from "./utils/babelHelpers.js";
 import { Component as C, createElement as h } from 'react';
 export var Icon =
 /*#__PURE__*/
@@ -71,7 +71,7 @@ function (_C) {
       props.opacity = opacity != null ? opacity : shade === 'on-light' ? state === 'focused' ? '.87' : state === 'active' ? '.54' : state === 'inactive' ? '.38' : state === 'error' ? '1' : undefined : shade === 'on-dark' ? state === 'focused' ? '1' : state === 'active' ? '.7' : state === 'inactive' ? '.5' : state === 'error' ? '1' : undefined : undefined;
       props.width = props.height = size != null ? size : 24;
       props.viewBox = viewBox != null ? viewBox : '0 0 24 24';
-      return h(component != null ? component : 'svg', Object.assign(props, rest), title != null ? [h('title', {
+      return h(component != null ? component : 'svg', _extends({}, props, rest), title != null ? [h('title', {
         key: title
       }, title), children] : children);
     }

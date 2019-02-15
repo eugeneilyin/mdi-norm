@@ -1,6 +1,6 @@
 {
   "name": "mdi-norm",
-  "version": "1.0.1",
+  "version": "2.1.0",
   "description": "Fixed, normalized, minifed, and deduplicated Material Design system SVG icons for React",
   "license": "MIT",
   "keywords": [
@@ -51,21 +51,21 @@
     "react": ">=0.14.0 || >=15.0.0-0 || >=16.0.0-0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0",
-    "@babel/core": "^7.0",
-    "@babel/preset-env": "^7.0",
+    "@babel/cli": "^7.2",
+    "@babel/core": "^7.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3",
     "@babel/preset-react": "^7.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6",
+    "babel-jest": "^24.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4",
     "cross-env": "^5.0",
-    "enzyme": "^3.7",
-    "enzyme-adapter-react-16": "^1.6",
-    "jest": "^23.6",
+    "enzyme": "^3.8",
+    "enzyme-adapter-react-16": "^1.9",
+    "jest": "^24.1",
     "path": "^0.12.7",
     "prop-types": ">=15.6",
     "react": ">=0.14",
-    "react-dom": "16.6",
+    "react-dom": "^16.8",
     "rimraf": "^2.6"
   }
 }
