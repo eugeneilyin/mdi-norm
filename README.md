@@ -22,7 +22,7 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 ## The problem
 
-Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output. The same issues are present in [@material-ui/icons][material-ui] icons library.
+Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output. The same issues are present in [@material-ui/icons][material-ui] library.
 
 ## This solution
 
