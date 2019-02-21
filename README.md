@@ -387,7 +387,7 @@ This gives you an ability to change icon themes dynamically with the `theme` pro
 
 You can explore all five themes on the official Google's material design [icon set][google-md-icons].
 
-> Note: Three exceptions exist for direct import of icons: use `<Icon4K />` instead of `<4K />`, `<Icon360 />` instead of `<360 />`, and `<Icon3DRotation />` instead of `<3DRotation />`. In all other cases you can use direct camel-cased icon name as is (e.g. `<Star />`, `<People />`, `<InsertComment />`). If you use `babel-macros` the you can omit this rule and use `360`, `4K`, and `3DRotation` as icon name directly without prefix.
+> Note: Three exceptions exist for direct import of icons: use `<Icon4K />` instead of `<4K />`, `<Icon360 />` instead of `<360 />`, and `<Icon3DRotation />` instead of `<3DRotation />`. In all other cases you can use direct camel-cased icon name as is (e.g. `<Star />`, `<People />`, `<InsertComment />`). If you use `babel-macros` then you can omit this rule and use `360`, `4K`, and `3DRotation` as icon name directly without prefix.
 
 ## Properties
 
