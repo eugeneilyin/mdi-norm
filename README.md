@@ -22,7 +22,7 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 ## The problem
 
-Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output.
+Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output. The same issues are present in [@material-ui/icons][material-ui] icons library.
 
 ## This solution
 
@@ -83,10 +83,10 @@ Compared to the official Google system icon set the next fixes, normalization, m
 * Deep `<path>` elements draw commands elimination by removing all commands not involved in pixels rendering
 * Identified 1,994 duplicates (about ~38%, details [here][duplicates]) in 5,220 icons based on:
   * Duplicates from equal SVG-code after clearing, normalization, and reordering of SVG elements and attributes
-  * Duplicates from same pixels rendering for _different_ SVG-code
+  * Duplicates from the same pixels rendering provided by _different_ SVG-code
   * Duplicates from [Structural Similarity (SSIM)][ssim] cross-validation and compare
-  * Duplicates from Visual Similarity computation, sorting and cross-validation for the rest of unique icons for deeper duplicated identification
-* All duplicated icons use only the **most compact** SVG code representation
+  * Duplicates from Visual Similarity computation, sorting and cross-validation for the rest of unique icons
+* All duplicated icons use the **most compact** single SVG-code variant
 * Manual SVG-code fixes for cases where render coordinates are not pixel-aligned with Google material design icon keylines
 
 ## Usage
@@ -96,7 +96,7 @@ Every icon name is prefixed with one of five available themes (`Filled`, `Outlin
 For example original `kitchen` icon from **filled** theme becomes `FilledKitchen`.
 Another example is `fitness_center` icon from **two-tone** theme is exported as `TwoToneFitnessCenter` and so on.
 
-If you omit prefix and use direct icon name (like `FitnessCenter` in the example above) then used theme can be specified by `theme` prop. See [themed icons](#themed-icons) for details.
+If you omit prefix and use direct icon name (like `FitnessCenter` in the example above) then used theme can be specified by the `theme` prop. See [themed icons](#themed-icons) for details.
 
 ### With Babel macros
 
@@ -126,7 +126,7 @@ export const MyComponent = () =>
 This is boring, and error prone. To have a better development experience the [Babel Macros][babel-macros] is provided with this library. This makes possible to run Babel transforms without changing a Babel config. The Create React App v2 is already contains babel macros in .babelc file.
 
 With `mdi-norm/macro` all necessary icon imports will be provided automatically - the code will be transpiled before compilation.
-All you need is just add macro to you import section:
+All you need is just add macro to your import section:
 
 ```jsx
 import i from 'mdi-norm/macro'
@@ -243,14 +243,14 @@ const { RoundRoomService } = require('mdi-norm/lib/RoundRoomService');
 <RoundRoomService />
 ```
 
-Also you can import all 6264 icon classes into your bundle (**NOT** recomended, due to long compilation time):
+Also you can import all 6,264 icon classes into your bundle (**NOT** recomended, the all 6,264 icons SVG-code has ~1.5M raw / ~300Kb gzipped size):
 
 ```jsx
 // Import all icons from package (not recomended at all)
-import * as MDI from 'mdi-norm'
+import * as Icons from 'mdi-norm'
 
-<MDI.Spa theme="ouline"/>
-<MDI.TwoToneStar />
+<Icons.Spa theme="outline"/>
+<Icons.TwoToneStar size={48} style={{color: 'green'}}/>
 ```
 
 ### Customization
@@ -509,3 +509,4 @@ MIT
 [npm-downloads-badge]: https://img.shields.io/npm/dm/mdi-norm.svg?style=flat
 [npm-downloads]: https://www.npmjs.com/package/mdi-norm
 [babel-macros]: https://github.com/kentcdodds/babel-plugin-macros
+[material-ui]: https://github.com/mui-org/material-ui/tree/next/packages/material-ui-icons
