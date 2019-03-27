@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { ec, bih } from './fragments';
 export var OutlineFiberManualRecord =
 /*#__PURE__*/
 function OutlineFiberManualRecord(props) {
-  return h(Icon, props, h("path", {
-    d: "M12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6m0-2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M12 6" + bih + "s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6m0-2" + ec
   }));
 };

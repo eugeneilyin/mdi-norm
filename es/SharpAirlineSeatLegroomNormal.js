@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b } from './fragments';
 export var SharpAirlineSeatLegroomNormal =
 /*#__PURE__*/
 function SharpAirlineSeatLegroomNormal(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 15V3H3v14h11v-2zm17 3h-3v-7c0-1.1-.9-2-2-2h-5V3H6v11h10v7h6z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 15V3H3v14h11v-2zm17 3h-3v-7" + b + "h-5V3H6v11h10v7h6z"
   }));
 };

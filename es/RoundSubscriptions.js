@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bo, cm, dk, el, ez, nr, boo } from './fragments';
 export var RoundSubscriptions =
 /*#__PURE__*/
 function RoundSubscriptions(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 8H5c-.55 0-1-.45-1-1s.45-1 1-1h14c.55 0 1 .45 1 1s-.45 1-1 1zm-2-6H7c-.55 0-1 .45-1 1s.45 1 1 1h10c.55 0 1-.45 1-1s-.45-1-1-1zm5 10v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-8c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2zm-6.81 3.56L10 12.73v6.53l5.19-2.82c.35-.19.35-.69 0-.88z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 8H5" + el + "h14" + dk + "zm-2-6H7" + boo + "m5 10v8" + nr + "H4" + bo + "v-8" + ez + "h16" + cm + "zm-6.81 3.56L10 12.73v6.53l5.19-2.82c.35-.19.35-.69 0-.88z"
   }));
 };

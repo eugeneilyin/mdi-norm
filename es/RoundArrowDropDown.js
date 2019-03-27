@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { du } from './fragments';
 export var RoundArrowDropDown =
 /*#__PURE__*/
 function RoundArrowDropDown(props) {
-  return h(Icon, props, h("path", {
-    d: "M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M8.71 11.71l2.59 2.59" + du + "l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
   }));
 };

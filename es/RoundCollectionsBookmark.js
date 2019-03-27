@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { d, k, o, bu, ng } from './fragments';
 export var RoundCollectionsBookmark =
 /*#__PURE__*/
 function RoundCollectionsBookmark(props) {
-  return h(Icon, props, h("path", {
-    d: "M17 20H5c-.55 0-1-.45-1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v13c0 1.1.9 2 2 2h13c.55 0 1-.45 1-1s-.45-1-1-1zm3-18H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 10l-2.5-1.5L15 12V4h5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M17 20H5" + k + "V7" + bu + "v13" + d + "h13" + o + "zm3-18" + ng + "m0 10l-2.5-1.5L15 12V4h5z"
   }));
 };

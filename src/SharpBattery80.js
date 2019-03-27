@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { zb } from './fragments'
 
 export const SharpBattery80 = /*#__PURE__*/ props => <Icon {...props}>
-  <path opacity=".3" d="M17 4h-3V2h-4v2H7v5h10z"/><path d="M7 9v13h10V9z"/>
+  <path opacity=".3" d={zb + "v5h10z"}/><path d={"M7 9v13h10V9z"}/>
 </Icon>

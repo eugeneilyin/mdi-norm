@@ -1,13 +1,14 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c, d } from './fragments';
 export var RoundPriorityHigh =
 /*#__PURE__*/
 function RoundPriorityHigh(props) {
-  return h(Icon, props, h("circle", {
+  return React.createElement(Icon, props, React.createElement("circle", {
     cx: "12",
     cy: "19",
     r: "2"
-  }), h("path", {
-    d: "M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z"
+  }), React.createElement("path", {
+    d: "M12 3" + c + "v8" + d + "s2-.9 2-2V5" + b + "z"
   }));
 };

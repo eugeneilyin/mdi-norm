@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { a, b, c, d, dn, dr } from './fragments'
 
 export const TwoToneCenterFocusWeak = /*#__PURE__*/ props => <Icon {...props}>
-  <path opacity=".3" d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M3 19c0 1.1.9 2 2 2h4v-2H5v-4H3zM3 5v4h2V5h4V3H5c-1.1 0-2 .9-2 2zm9 3c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm9-9c0-1.1-.9-2-2-2h-4v2h4v4h2zm-2 14h-4v2h4c1.1 0 2-.9 2-2v-4h-2z"/>
+  <path opacity=".3" d={"M12 10" + dn}/><path d={"M3 19" + d + "h4v-2H5v-4H3zM3 5v4h2V5h4V3H5" + c + "zm9 3" + dr + "m9-9" + b + "h-4v2h4v4h2zm-2 14h-4v2h4" + a + "v-4h-2z"}/>
 </Icon>

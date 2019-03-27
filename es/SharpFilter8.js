@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { gr, rh } from './fragments';
 export var SharpFilter8 =
 /*#__PURE__*/
 function SharpFilter8(props) {
-  return h(Icon, props, h("path", {
-    d: "M3 5H1v18h18v-2H3zm20-4H5v18h18zm-2 16H7V3h14zm-8-2h2c1.1 0 2-.89 2-2v-1.5c0-.83-.67-1.5-1.5-1.5.83 0 1.5-.67 1.5-1.5V7c0-1.11-.9-2-2-2h-2c-1.1 0-2 .89-2 2v1.5c0 .83.67 1.5 1.5 1.5-.83 0-1.5.67-1.5 1.5V13c0 1.11.9 2 2 2zm0-8h2v2h-2zm0 4h2v2h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: rh + "m-8-2" + gr
   }));
 };

@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { b, c, d } from './fragments'
 
 export const RoundPriorityHigh = /*#__PURE__*/ props => <Icon {...props}>
-  <circle cx="12" cy="19" r="2"/><path d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+  <circle cx="12" cy="19" r="2"/><path d={"M12 3" + c + "v8" + d + "s2-.9 2-2V5" + b + "z"}/>
 </Icon>

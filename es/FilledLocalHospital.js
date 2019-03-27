@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { d, bm, br } from './fragments';
 export var FilledLocalHospital =
 /*#__PURE__*/
 function FilledLocalHospital(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 3H5" + bm + "L3 19" + d + "h14" + br + "m-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4z"
   }));
 };

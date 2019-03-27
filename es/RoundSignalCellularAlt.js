@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { cp, kj, ot } from './fragments';
 export var RoundSignalCellularAlt =
 /*#__PURE__*/
 function RoundSignalCellularAlt(props) {
-  return h(Icon, props, h("path", {
-    d: "M18.5 4c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-13c0-.83.67-1.5 1.5-1.5zm-12 10c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5S5 19.33 5 18.5v-3c0-.83.67-1.5 1.5-1.5zm6-5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-8c0-.83.67-1.5 1.5-1.5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M18.5 4" + cp + "v13" + ot + "s-1.5-.67-1.5-1.5v-13" + kj + "zm-12 10" + cp + "v3" + ot + "S5 19.33 5 18.5v-3" + kj + "zm6-5" + cp + "v8" + ot + "s-1.5-.67-1.5-1.5v-8" + kj + "z"
   }));
 };

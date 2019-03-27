@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { yt } from './fragments';
 export var FilledToday =
 /*#__PURE__*/
 function FilledToday(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14zM7 10h5v5H7z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 3" + yt + "V8h14zM7 10h5v5H7z"
   }));
 };

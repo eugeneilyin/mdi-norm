@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { zb } from './fragments';
 export var SharpBatteryStd =
 /*#__PURE__*/
 function SharpBatteryStd(props) {
-  return h(Icon, props, h("path", {
-    d: "M17 4h-3V2h-4v2H7v18h10z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: zb + "v18h10z"
   }));
 };

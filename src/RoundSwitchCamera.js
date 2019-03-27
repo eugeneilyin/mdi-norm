@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { na, qp, bou } from './fragments'
 
 export const RoundSwitchCamera = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M20 4h-3.17l-1.24-1.35c-.37-.41-.91-.65-1.47-.65H9.88c-.56 0-1.1.24-1.48.65L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 11.5V13H9v2.5l-3.15-3.15c-.2-.2-.2-.51 0-.71L9 8.5V11h6V8.5l3.15 3.15c.2.2.2.51 0 .71z"/>
+  <path d={"M20 4" + qp + "L7.17 4" + na + "m-5 11.5V13H9v2.5l-3.15-3.15c-.2-.2-.2-.51 0-.71L9 8.5V11h6V8.5" + bou + "z"}/>
 </Icon>

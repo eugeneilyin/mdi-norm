@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { d, eh } from './fragments';
 export var FilledSdStorage =
 /*#__PURE__*/
 function FilledSdStorage(props) {
-  return h(Icon, props, h("path", {
-    d: "M18 2h-8L4.02 8 4 20c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 6h-2V4h2zm3 0h-2V4h2zm3 0h-2V4h2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M18 2h-8L4.02 8 4 20" + d + "h12" + eh + "m-6 6h-2V4h2zm3 0h-2V4h2zm3 0h-2V4h2z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { f, j, bu, cc } from './fragments';
 export var RoundGraphicEq =
 /*#__PURE__*/
 function RoundGraphicEq(props) {
-  return h(Icon, props, h("path", {
-    d: "M8 18c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v10c0 .55.45 1 1 1zm4 4c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1s-1 .45-1 1v18c0 .55.45 1 1 1zm-8-8c.55 0 1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1v2c0 .55.45 1 1 1zm12 4c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v10c0 .55.45 1 1 1zm3-7v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M8 18" + f + "V7" + bu + "v10" + j + "zm4 4" + f + "V3" + bu + "v18" + j + "zm-8-8" + f + "v-2" + bu + "v2" + j + "zm12 4" + f + "V7" + bu + "v10" + j + "zm3-7v2" + cc + "v-2" + bu + "z"
   }));
 };

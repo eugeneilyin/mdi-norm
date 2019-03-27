@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, e, f, g, j, k, x, bu, mq } from './fragments';
 export var RoundInsertInvitation =
 /*#__PURE__*/
 function RoundInsertInvitation(props) {
-  return h(Icon, props, h("path", {
-    d: "M16 12h-3c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1zm0-10v1H8V2c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm2 17H6c-.55 0-1-.45-1-1V8h14v10c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M16 12h-3" + e + "v3" + j + "h3" + f + "v-3" + g + "zm0-10v1H8V2" + bu + "v1" + mq + a + "V5" + b + "h-1V2" + bu + "zm2 17H6" + k + "V8h14v10" + x + "z"
   }));
 };

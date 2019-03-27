@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dp, bgv } from './fragments';
 export var FilledAssessment =
 /*#__PURE__*/
 function FilledAssessment(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: dp + "M9 17" + bgv
   }));
 };

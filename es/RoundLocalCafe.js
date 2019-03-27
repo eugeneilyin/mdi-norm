@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, o, bf, br, ck, lh } from './fragments';
 export var RoundLocalCafe =
 /*#__PURE__*/
 function RoundLocalCafe(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 3H6c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2zM3 21h16c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1s.45 1 1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 3H6" + c + "v8" + lh + "h6" + ck + "v-3h2" + br + "m0 5h-2V5h2zM3 21h16" + o + "H3" + bf + "z"
   }));
 };

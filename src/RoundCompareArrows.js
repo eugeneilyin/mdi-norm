@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { o, bf, nz, om, bdq } from './fragments'
 
 export const RoundCompareArrows = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M9.01 14H3c-.55 0-1 .45-1 1s.45 1 1 1h6.01v1.79c0 .45.54.67.85.35l2.78-2.79c.19-.2.19-.51 0-.71l-2.78-2.79c-.31-.32-.85-.09-.85.35zm5.98-2.21V10H21c.55 0 1-.45 1-1s-.45-1-1-1h-6.01V6.21c0-.45-.54-.67-.85-.35l-2.78 2.79c-.19.2-.19.51 0 .71l2.78 2.79c.31.31.85.09.85-.36z"/>
+  <path d={"M9.01 14H3" + bf + "h6.01v1.79" + nz + "l2.78-2.79c.19-.2.19-.51 0-.71l-2.78-2.79c-.31-.32-.85-.09-.85.35zm5.98-2.21V10H21" + o + "h-6.01V6.21" + om + "l-2.78 2.79c-.19.2-.19.51 0 .71l2.78 2.79" + bdq + "z"}/>
 </Icon>

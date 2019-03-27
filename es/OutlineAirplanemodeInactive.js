@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { df, fg, bpp } from './fragments';
 export var OutlineAirplanemodeInactive =
 /*#__PURE__*/
 function OutlineAirplanemodeInactive(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5v3.11l8.65 8.65zm-2.27 5l1.41-1.41L4.41 3.86 3 5.27l4.99 4.99L2 14v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-3.73z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M21 16v-2l-8-5V3.5" + df + "S10 2.67 10 3.5v3.11l8.65 8.65zm-2.27 5" + fg + "L4.41 3.86 3 5.27l4.99 4.99L2 14" + bpp + "v-3.73z"
   }));
 };

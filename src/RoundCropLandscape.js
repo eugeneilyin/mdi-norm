@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { b, c, k, n, x, bc, fm } from './fragments'
 
 export const RoundCropLandscape = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M19 5H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-1 12H6c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1z"/>
+  <path d={"M19 5H5" + c + "v10" + fm + "V7" + b + "zm-1 12H6" + k + "V8" + bc + "h12" + n + "v8" + x + "z"}/>
 </Icon>

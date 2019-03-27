@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dk, el, em, ho, ss } from './fragments';
 export var RoundAddLocation =
 /*#__PURE__*/
 function RoundAddLocation(props) {
-  return h(Icon, props, h("path", {
-    d: "M12 2C8.14 2 5 5.14 5 9c0 4.17 4.42 9.92 6.24 12.11.4.48 1.13.48 1.53 0C14.58 18.92 19 13.17 19 9c0-3.86-3.14-7-7-7zm3 8h-2v2c0 .55-.45 1-1 1s-1-.45-1-1v-2H9c-.55 0-1-.45-1-1s.45-1 1-1h2V6c0-.55.45-1 1-1s1 .45 1 1v2h2c.55 0 1 .45 1 1s-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: ss + "m3 8h-2v2" + em + "v-2H9" + el + "h2V6" + ho + "v2h2" + dk + "z"
   }));
 };

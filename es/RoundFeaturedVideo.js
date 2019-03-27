@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { k, n, x, bc, cf } from './fragments';
 export var RoundFeaturedVideo =
 /*#__PURE__*/
 function RoundFeaturedVideo(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-10 9H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1 .45 1 1v5c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: cf + "m-10 9H4" + k + "V6" + bc + "h7" + n + "v5" + x + "z"
   }));
 };

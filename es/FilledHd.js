@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { n, x, br, dx, bca } from './fragments';
 export var FilledHd =
 /*#__PURE__*/
 function FilledHd(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 12H9.5v-2h-2v2H6V9h1.5v2.5h2V9H11zm2-6h4c.55 0 1 .45 1 1v4c0 .55-.45 1-1 1h-4zm1.5 4.5h2v-3h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 3" + dx + br + "m-8 12" + bca + "m2-6h4" + n + "v4" + x + "h-4zm1.5 4.5h2v-3h-2z"
   }));
 };

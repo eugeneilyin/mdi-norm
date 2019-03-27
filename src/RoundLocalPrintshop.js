@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { a, d, e, f, g, j, k, x, bj, fj, gb } from './fragments'
 
 export const RoundLocalPrintshop = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M19 8H5c-1.66 0-3 1.34-3 3v4c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-4c0-1.66-1.34-3-3-3zm-4 11H9c-.55 0-1-.45-1-1v-4h8v4c0 .55-.45 1-1 1zm4-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-2-9H7c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1z"/>
+  <path d={"M19 8H5" + fj + "v4" + d + "h2v2" + d + "h8" + a + "v-2h2" + a + "v-4" + gb + "zm-4 11H9" + k + "v-4h8v4" + x + "zm4-7" + bj + "m-2-9H7" + e + "v2" + j + "h10" + f + "V4" + g + "z"}/>
 </Icon>

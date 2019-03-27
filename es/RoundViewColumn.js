@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, zi } from './fragments';
 export var RoundViewColumn =
 /*#__PURE__*/
 function RoundViewColumn(props) {
-  return h(Icon, props, h("path", {
-    d: "M11 18h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1zm-6 0h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1zM16 6v11c0 .55.45 1 1 1h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M11 18h3" + zi + "h-3" + e + "v11" + j + "zm-6 0h3" + zi + "H5" + e + "v11" + j + "zM16 6v11" + j + "h3" + zi + "h-3" + e + "z"
   }));
 };

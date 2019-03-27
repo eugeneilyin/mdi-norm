@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { qi } from './fragments'
 
 export const OutlineLooksOne = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14zm-7-2h2V7h-4v2h2z"/>
+  <path d={qi + "m-7-2h2V7h-4v2h2z"}/>
 </Icon>

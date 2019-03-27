@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { k, bc, bkx } from './fragments';
 export var RoundForward =
 /*#__PURE__*/
 function RoundForward(props) {
-  return h(Icon, props, h("path", {
-    d: "M12 8V6.41c0-.89 1.08-1.34 1.71-.71l5.59 5.59c.39.39.39 1.02 0 1.41l-5.59 5.59c-.63.63-1.71.19-1.71-.7V16H5c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M12 8V6.41c0-.89 1.08-1.34 1.71-.71l5.59 5.59" + bkx + "l-5.59 5.59c-.63.63-1.71.19-1.71-.7V16H5" + k + "V9" + bc + "z"
   }));
 };

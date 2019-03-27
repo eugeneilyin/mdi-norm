@@ -1,17 +1,17 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
-import { configure, shallow, mount } from 'enzyme'
+import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Icon } from '../src/Icon'
 
-configure({ adapter: new Adapter() })
+configure({adapter: new Adapter()})
 
 describe('<Icon />', () => {
   test('should render with default props', () => {
     const wrapper = shallow(
       <Icon>
-        <path d="M0 1"/>
-      </Icon>
+        <path d="M0 1" />
+      </Icon>,
     )
     expect(wrapper.type()).toBe('svg')
     expect(wrapper.props()['aria-hidden']).toEqual(true)
@@ -20,7 +20,7 @@ describe('<Icon />', () => {
     expect(wrapper.props().viewBox).toEqual('0 0 24 24')
     expect(wrapper.props().fill).toEqual('currentColor')
     expect(wrapper.props().opacity).toEqual(undefined)
-    expect(wrapper.contains(<path d="M0 1"/>)).toEqual(true)
+    expect(wrapper.contains(<path d="M0 1" />)).toEqual(true)
   })
 
   test('should handle semantic icon rendering', () => {
@@ -72,7 +72,8 @@ describe('<Icon />', () => {
   })
 
   test('should handle disabled state with on-light theme shade', () => {
-    const wrapper = shallow(<Icon shade='on-light' state='inactive'>{''}</Icon>)
+    const wrapper = shallow(<Icon shade='on-light'
+                                  state='inactive'>{''}</Icon>)
     expect(wrapper.props().fill).toEqual('#000000')
     expect(wrapper.props().opacity).toEqual('.38')
   })

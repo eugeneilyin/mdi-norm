@@ -1,2 +1,2 @@
-import { RoundSubway as SharpSubway } from './RoundSubway'
+import { FilledSubway as SharpSubway } from './FilledSubway'
 export { SharpSubway }

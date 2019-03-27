@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, ke, bbz, bke } from './fragments';
 export var RoundTv =
 /*#__PURE__*/
 function RoundTv(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v1c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-1h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm-1 14H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h16c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: bbz + "h5" + ke + "L23 5" + b + "z" + bke
   }));
 };

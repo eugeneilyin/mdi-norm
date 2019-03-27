@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { cf } from './fragments';
 export var FilledVignette =
 /*#__PURE__*/
 function FilledVignette(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 15c-4.42 0-8-2.69-8-6s3.58-6 8-6 8 2.69 8 6-3.58 6-8 6z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: cf + "m-9 15c-4.42 0-8-2.69-8-6s3.58-6 8-6 8 2.69 8 6-3.58 6-8 6z"
   }));
 };

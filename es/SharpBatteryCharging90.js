@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { zb, bns } from './fragments';
 export var SharpBatteryCharging90 =
 /*#__PURE__*/
 function SharpBatteryCharging90(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
-    d: "M17 4h-3V2h-4v2H7v4h5.47L13 7v1h4z"
-  }), h("path", {
-    d: "M13 12.5h2L11 20v-5.5H9L12.47 8H7v14h10V8h-4z"
+    d: zb + "v4h5.47L13 7v1h4z"
+  }), React.createElement("path", {
+    d: bns + "L12.47 8H7v14h10V8h-4z"
   }));
 };

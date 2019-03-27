@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { d, bm, br } from './fragments'
 
 export const OutlineLocalHospital = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14zm-8.5-2h3v-3.5H17v-3h-3.5V7h-3v3.5H7v3h3.5z"/>
+  <path d={"M19 3H5" + bm + "L3 19" + d + "h14" + br + "m0 16H5V5h14zm-8.5-2h3v-3.5H17v-3h-3.5V7h-3v3.5H7v3h3.5z"}/>
 </Icon>

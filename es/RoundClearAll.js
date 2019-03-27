@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, o, bf, ro } from './fragments';
 export var RoundClearAll =
 /*#__PURE__*/
 function RoundClearAll(props) {
-  return h(Icon, props, h("path", {
-    d: "M6 13h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1s.45 1 1 1zm-2 4h12c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm3-9c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H8c-.55 0-1 .45-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M6 13h12" + o + "H6" + bf + "zm-2 4h12" + ro + "m3-9" + j + "h12" + o + "H8" + e + "z"
   }));
 };

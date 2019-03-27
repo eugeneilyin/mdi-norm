@@ -1,4 +1,4 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
 
 export const FilledSignalCellular2Bar = /*#__PURE__*/ props => <Icon {...props}>

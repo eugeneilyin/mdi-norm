@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c } from './fragments';
 export var OutlineEventSeat =
 /*#__PURE__*/
 function OutlineEventSeat(props) {
-  return h(Icon, props, h("path", {
-    d: "M15 5v7H9V5h6m0-2H9c-1.1 0-2 .9-2 2v9h10V5c0-1.1-.9-2-2-2zm7 7h-3v3h3zM5 10H2v3h3zm15 5H4v6h2v-4h12v4h2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M15 5v7H9V5h6m0-2H9" + c + "v9h10V5" + b + "zm7 7h-3v3h3zM5 10H2v3h3zm15 5H4v6h2v-4h12v4h2z"
   }));
 };

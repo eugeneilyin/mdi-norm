@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dn } from './fragments';
 export var FilledMoreHoriz =
 /*#__PURE__*/
 function FilledMoreHoriz(props) {
-  return h(Icon, props, h("path", {
-    d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M6 10" + dn + "m12 0" + dn + "m-6 0" + dn
   }));
 };

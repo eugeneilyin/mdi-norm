@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dp, wa, wz } from './fragments';
 export var FilledLooks5 =
 /*#__PURE__*/
 function FilledLooks5(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h2c1.1 0 2 .89 2 2v2c0 1.11-.9 2-2 2H9v-2h4v-2H9V7h6z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: dp + "m-4 6h-4v2h2" + wa + "v2" + wz + "H9v-2h4v-2H9V7h6z"
   }));
 };

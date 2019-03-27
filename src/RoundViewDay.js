@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { e, f, g, j, bab } from './fragments'
 
 export const RoundViewDay = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M3 21h17c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1zM20 8H3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h17c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zM2 4v1c0 .55.45 1 1 1h17c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1z"/>
+  <path d={"M3 21h17" + f + "v-1" + g + "H3" + e + "v1" + j + "zM20 8" + bab + "V9" + g + "zM2 4v1" + j + "h17" + f + "V4" + g + "H3" + e + "z"}/>
 </Icon>

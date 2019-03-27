@@ -1,4 +1,4 @@
-function defineProperties(target, props) {
+function defineProperties (target, props) {
   for (var i = 0; i < props.length; i++) {
     var descriptor = props[i]
     descriptor.enumerable = descriptor.enumerable || false
@@ -8,11 +8,11 @@ function defineProperties(target, props) {
   }
 }
 
-export /*#__PURE__*/ function interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj }
+export /*#__PURE__*/ function interopRequireDefault (obj) {
+  return obj && obj.__esModule ? obj : {default: obj}
 }
 
-export /*#__PURE__*/ function classCallCheck(instance, Constructor) {
+export /*#__PURE__*/ function classCallCheck (instance, Constructor) {
   if (process.env.NODE_ENV !== 'production') {
     if (!(instance instanceof Constructor)) {
       throw new TypeError('Cannot call a class as a function')
@@ -20,20 +20,22 @@ export /*#__PURE__*/ function classCallCheck(instance, Constructor) {
   }
 }
 
-export function createClass(Constructor, protoProps, staticProps) {
+export function createClass (Constructor, protoProps, staticProps) {
   if (protoProps) defineProperties(Constructor.prototype, protoProps)
   if (staticProps) defineProperties(Constructor, staticProps)
   return Constructor
 }
 
-export /*#__PURE__*/ function getPrototypeOf(o) {
-  var _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o)
-  }
+export /*#__PURE__*/ function getPrototypeOf (o) {
+  var _getPrototypeOf = Object.setPrototypeOf
+    ? Object.getPrototypeOf
+    : function _getPrototypeOf (o) {
+      return o.__proto__ || Object.getPrototypeOf(o)
+    }
   return _getPrototypeOf(o)
 }
 
-export function inherits(subClass, superClass) {
+export function inherits (subClass, superClass) {
   if (process.env.NODE_ENV !== 'production') {
     if (typeof superClass !== 'function' && superClass !== null) {
       throw new TypeError('Super expression must either be null or a function')
@@ -43,36 +45,37 @@ export function inherits(subClass, superClass) {
     constructor: {
       value: subClass,
       writable: true,
-      configurable: true
-    }
+      configurable: true,
+    },
   })
   if (superClass) {
-    var _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(subClass, superClass) {
-      subClass.__proto__ = superClass
-      return subClass
-    }
+    var _setPrototypeOf = Object.setPrototypeOf ||
+      function _setPrototypeOf (subClass, superClass) {
+        subClass.__proto__ = superClass
+        return subClass
+      }
     return _setPrototypeOf(subClass, superClass)
   }
 }
 
-export function _extends() {
+export function _extends () {
   var _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
+      var source = arguments[i]
 
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
+          target[key] = source[key]
         }
       }
     }
 
-    return target;
-  };
-  return _extends.apply(this, arguments);
+    return target
+  }
+  return _extends.apply(this, arguments)
 }
 
-export /*#__PURE__*/ function objectWithoutProperties(source, excluded) {
+export /*#__PURE__*/ function objectWithoutProperties (source, excluded) {
   if (source == null) return {}
   var target = {}
   var sourceKeys = Object.keys(source)
@@ -94,13 +97,14 @@ export /*#__PURE__*/ function objectWithoutProperties(source, excluded) {
   return target
 }
 
-export /*#__PURE__*/ function possibleConstructorReturn(self, call) {
+export /*#__PURE__*/ function possibleConstructorReturn (self, call) {
   if (call && (typeof call === 'object' || typeof call === 'function')) {
     return call
   }
   if (process.env.NODE_ENV !== 'production') {
     if (self === void 0) {
-      throw new ReferenceError('this hasn\'t been initialised - super() hasn\'t been called')
+      throw new ReferenceError(
+        'this hasn\'t been initialised - super() hasn\'t been called')
     }
   }
   return self

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, c, d, f, g, k, n, o, x, bc, bf, bu, cc, ki, me, bbs } from './fragments';
 export var RoundMemory =
 /*#__PURE__*/
 function RoundMemory(props) {
-  return h(Icon, props, h("path", {
-    d: "M14 9h-4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1zm-1 4h-2v-2h2zm8-3c0-.55-.45-1-1-1h-1V7c0-1.1-.9-2-2-2h-2V4c0-.55-.45-1-1-1s-1 .45-1 1v1h-2V4c0-.55-.45-1-1-1s-1 .45-1 1v1H7c-1.1 0-2 .9-2 2v2H4c-.55 0-1 .45-1 1s.45 1 1 1h1v2H4c-.55 0-1 .45-1 1s.45 1 1 1h1v2c0 1.1.9 2 2 2h2v1c0 .55.45 1 1 1s1-.45 1-1v-1h2v1c0 .55.45 1 1 1s1-.45 1-1v-1h2c1.1 0 2-.9 2-2v-2h1c.55 0 1-.45 1-1s-.45-1-1-1h-1v-2h1c.55 0 1-.45 1-1zm-5 7H8c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1h8c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M14 9h-4" + ki + "h4" + bbs + "zm-1 4" + me + "m8-3" + g + "h-1V7" + b + "h-2V4" + bu + "v1h-2V4" + bu + "v1H7" + c + "v2H4" + bf + "h1v2H4" + bf + "h1v2" + d + "h2v1" + cc + "v-1h2v1" + cc + "v-1h2" + a + "v-2h1" + o + "h-1v-2h1" + f + "zm-5 7H8" + k + "V8" + bc + "h8" + n + "v8" + x + "z"
   }));
 };

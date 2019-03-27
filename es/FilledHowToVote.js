@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dc, du, fo, yj } from './fragments';
 export var FilledHowToVote =
 /*#__PURE__*/
 function FilledHowToVote(props) {
-  return h(Icon, props, h("path", {
-    d: "M18 13h-.68l-2 2h1.91L19 17H5l1.78-2h2.05l-2-2H6l-3 3v4c0 1.1.89 2 1.99 2H19c1.1 0 2-.89 2-2v-4zm-1-5.05l-4.95 4.95-3.54-3.54 4.95-4.95zm-4.24-5.66L6.39 8.66c-.39.39-.39 1.02 0 1.41l4.95 4.95c.39.39 1.02.39 1.41 0l6.36-6.36c.39-.39.39-1.02 0-1.41L14.16 2.3c-.38-.4-1.01-.4-1.4-.01z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: yj + "m-1-5.05l-4.95 4.95-3.54-3.54 4.95-4.95zm-4.24-5.66L6.39 8.66" + dc + "l4.95 4.95" + du + "l6.36-6.36" + fo + "L14.16 2.3c-.38-.4-1.01-.4-1.4-.01z"
   }));
 };

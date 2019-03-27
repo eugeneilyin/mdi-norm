@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { cy, sq } from './fragments';
 export var FilledCrop32 =
 /*#__PURE__*/
 function FilledCrop32(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V6h14z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 4H5" + cy + "h14" + sq + "zm0 14H5V6h14z"
   }));
 };

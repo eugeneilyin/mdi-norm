@@ -1,12 +1,12 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
 export var FilledSignalCellular1Bar =
 /*#__PURE__*/
 function FilledSignalCellular1Bar(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M2 22h20V2z"
-  }), h("path", {
+  }), React.createElement("path", {
     d: "M12 12L2 22h10z"
   }));
 };

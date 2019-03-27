@@ -1,2 +1,2 @@
-import { FilledSentimentVerySatisfied as FilledMood } from './FilledSentimentVerySatisfied'
+import { FilledInsertEmoticon as FilledMood } from './FilledInsertEmoticon'
 export { FilledMood }

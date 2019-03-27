@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { k, n, x, bc, cc, wo } from './fragments';
 export var RoundStraighten =
 /*#__PURE__*/
 function RoundStraighten(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-1 10H4c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1h1v3c0 .55.45 1 1 1s1-.45 1-1V8h2v3c0 .55.45 1 1 1s1-.45 1-1V8h2v3c0 .55.45 1 1 1s1-.45 1-1V8h2v3c0 .55.45 1 1 1s1-.45 1-1V8h1c.55 0 1 .45 1 1v6c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: wo + "m-1 10H4" + k + "V9" + bc + "h1v3" + cc + "V8h2v3" + cc + "V8h2v3" + cc + "V8h2v3" + cc + "V8h1" + n + "v6" + x + "z"
   }));
 };

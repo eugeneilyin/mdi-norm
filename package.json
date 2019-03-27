@@ -1,6 +1,6 @@
 {
   "name": "mdi-norm",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Fixed, normalized, minifed, and deduplicated Material Design system SVG icons for React",
   "license": "MIT",
   "keywords": [
@@ -48,22 +48,24 @@
   "private": false,
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=0.14.0 || >=15.0.0-0 || >=16.0.0-0"
+    "react": ">=0.14.0 || >=15.0 || >=16.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2",
-    "@babel/core": "^7.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/preset-env": "^7.3",
+    "@babel/core": "^7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4",
+    "@babel/preset-env": "^7.4",
     "@babel/preset-react": "^7.0",
-    "babel-jest": "^24.1",
+    "babel-jest": "^24.5",
     "babel-plugin-transform-react-remove-prop-types": "^0.4",
-    "cross-env": "^5.0",
-    "enzyme": "^3.8",
-    "enzyme-adapter-react-16": "^1.9",
-    "jest": "^24.1",
+    "cross-env": "^5.2",
+    "enzyme": "^3.9",
+    "enzyme-adapter-react-16": "^1.11",
+    "jest": "^24.4",
+    "jest-haste-map": "24.0.0",
+    "jest-resolve": "24.1.0",
     "path": "^0.12.7",
-    "prop-types": ">=15.6",
+    "prop-types": ">=15.5",
     "react": ">=0.14",
     "react-dom": "^16.8",
     "rimraf": "^2.6"

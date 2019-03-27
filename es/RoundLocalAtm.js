@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, f, g, j, k, n, o, x, bc, bf, bu, cc, cx } from './fragments';
 export var RoundLocalAtm =
 /*#__PURE__*/
 function RoundLocalAtm(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 13c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h14c.55 0 1 .45 1 1zm-6-7c.55 0 1-.45 1-1s-.45-1-1-1h-1v-.01c0-.55-.45-1-1-1s-1 .45-1 1V8h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3v1h-3c-.55 0-1 .45-1 1s.45 1 1 1h1c0 .55.45 1 1 1s1-.45 1-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-3v-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 4" + cx + "m0 13" + x + "H5" + k + "V7" + bc + "h14" + n + "zm-6-7" + o + "h-1v-.01" + bu + "V8h-1" + e + "v3" + j + "h3v1h-3" + bf + "h1" + cc + "h1" + f + "v-3" + g + "h-3v-1z"
   }));
 };

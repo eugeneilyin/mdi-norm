@@ -1,2 +1,2 @@
-import { FilledSentimentVerySatisfied as FilledTagFaces } from './FilledSentimentVerySatisfied';
+import { FilledInsertEmoticon as FilledTagFaces } from './FilledInsertEmoticon';
 export { FilledTagFaces };

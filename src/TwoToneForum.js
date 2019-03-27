@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { e, f, g, j } from './fragments'
 
 export const TwoToneForum = /*#__PURE__*/ props => <Icon {...props}>
-  <path opacity=".3" d="M15 11V4H4v8.17L5.17 11z"/><path d="M16 13c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4zm-12-.83V4h11v7H5.17zM22 7c0-.55-.45-1-1-1h-2v9H6v2c0 .55.45 1 1 1h11l4 4z"/>
+  <path opacity=".3" d="M15 11V4H4v8.17L5.17 11z"/><path d={"M16 13" + f + "V3" + g + "H3" + e + "v14l4-4zm-12-.83V4h11v7H5.17zM22 7" + g + "h-2v9H6v2" + j + "h11l4 4z"}/>
 </Icon>

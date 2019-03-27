@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, f, g, o, bd, bf, br, cc, bjh } from './fragments';
 export var RoundAspectRatio =
 /*#__PURE__*/
 function RoundAspectRatio(props) {
-  return h(Icon, props, h("path", {
-    d: "M18 12c-.55 0-1 .45-1 1v2h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1zM7 9h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1s1-.45 1-1zm14-6H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16.01H4c-.55 0-1-.45-1-1V5.99c0-.55.45-1 1-1h16c.55 0 1 .45 1 1v12.02c0 .55-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M18 12" + e + "v2h-2" + bf + "h3" + f + "v-3" + g + "zM7 9h2" + o + "H6" + e + "v3" + cc + "zm14-6H3" + bd + "h18" + br + bjh
   }));
 };

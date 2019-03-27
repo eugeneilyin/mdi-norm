@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { bnu } from './fragments'
 
 export const TwoToneCalendarToday = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 2v3H4V5zM4 21V10h16v11z"/><path opacity=".3" d="M4 5.01h16V8H4z"/>
+  <path d={bnu + "m0 2v3H4V5zM4 21V10h16v11z"}/><path opacity=".3" d="M4 5.01h16V8H4z"/>
 </Icon>

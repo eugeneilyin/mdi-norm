@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { gj, js, nc, bnb } from './fragments'
 
 export const SharpLocalMall = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M21 6h-4c0-2.76-2.24-5-5-5S7 3.24 7 6H3v16h18zm-9-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm0 10c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z"/>
+  <path d={"M21 6h-4" + js + "S7 3.24 7 6H3v16h18zm-9-3" + gj + "H9" + nc + "zm0 10" + bnb}/>
 </Icon>

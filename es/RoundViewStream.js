@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, ki, zi, bbs } from './fragments';
 export var RoundViewStream =
 /*#__PURE__*/
 function RoundViewStream(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 18h15c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zM4 6v4c0 .55.45 1 1 1h15c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 18h15" + bbs + "H5" + ki + "zM4 6v4" + j + "h15" + zi + "H5" + e + "z"
   }));
 };

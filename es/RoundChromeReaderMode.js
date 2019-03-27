@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, d, n, x, sq, uv, xk } from './fragments';
 export var RoundChromeReaderMode =
 /*#__PURE__*/
 function RoundChromeReaderMode(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14c0 .55-.45 1-1 1h-8V6h8c.55 0 1 .45 1 1zm-1.75-8.5h-5.5c-.41 0-.75.34-.75.75s.34.75.75.75h5.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75zm0 2.5h-5.5c-.41 0-.75.34-.75.75s.34.75.75.75h5.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75zm0 2.5h-5.5c-.41 0-.75.34-.75.75s.34.75.75.75h5.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M21 4H3" + c + "v13" + d + "h18" + sq + "zm0 14" + x + "h-8V6h8" + n + "zm-1.75-8.5h-5.5" + xk + "h5.5" + uv + "zm0 2.5h-5.5" + xk + "h5.5" + uv + "zm0 2.5h-5.5" + xk + "h5.5" + uv + "z"
   }));
 };

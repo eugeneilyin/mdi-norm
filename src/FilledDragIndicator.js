@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { dg, dn, nr } from './fragments'
 
 export const FilledDragIndicator = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+  <path d={"M11 18" + nr + "s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8" + dn + "m0-6" + dn + "m6 4" + dg + "m0 2" + dn + "m0 6" + dn}/>
 </Icon>

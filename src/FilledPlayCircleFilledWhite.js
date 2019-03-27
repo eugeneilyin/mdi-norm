@@ -1,4 +1,4 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
 
 export const FilledPlayCircleFilledWhite = /*#__PURE__*/ props => <Icon viewBox="0 0 48 48" {...props}>

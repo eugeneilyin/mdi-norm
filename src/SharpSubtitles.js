@@ -1,4 +1,4 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
 
 export const SharpSubtitles = /*#__PURE__*/ props => <Icon {...props}>

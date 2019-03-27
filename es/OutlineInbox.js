@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, cr, nr, vl } from './fragments';
 export var OutlineInbox =
 /*#__PURE__*/
 function OutlineInbox(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5v-3h3.56c.69 1.19 1.97 2 3.45 2s2.75-.81 3.45-2H19zm0-5h-4.99c0 1.1-.9 2-2 2s-2-.9-2-2H5V5h14z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 3H5" + c + "v14" + cr + "h14" + vl + "h-4.99" + nr + "s-2-.9-2-2H5V5h14z"
   }));
 };

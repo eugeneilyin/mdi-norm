@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dd, dn } from './fragments';
 export var OutlineScatterPlot =
 /*#__PURE__*/
 function OutlineScatterPlot(props) {
-  return h(Icon, props, h("path", {
-    d: "M7 18c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm4-2c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm5.6 17.6c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M7 18" + dd + "m0-6" + dn + "m4-2" + dd + "m0-6" + dn + "m5.6 17.6" + dd + "m0-6" + dn
   }));
 };

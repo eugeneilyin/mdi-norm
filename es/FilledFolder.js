@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, sg } from './fragments';
 export var FilledFolder =
 /*#__PURE__*/
 function FilledFolder(props) {
-  return h(Icon, props, h("path", {
-    d: "M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M10 4" + sg + "V8" + b + "h-8z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { br, cy } from './fragments';
 export var FilledAirplay =
 /*#__PURE__*/
 function FilledAirplay(props) {
-  return h(Icon, props, h("path", {
-    d: "M6 22h12l-6-6zM21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V5h18v12h-4v2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M6 22h12l-6-6zM21 3H3" + cy + "h4v-2H3V5h18v12h-4v2h4" + br
   }));
 };

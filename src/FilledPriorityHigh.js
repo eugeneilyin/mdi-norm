@@ -1,4 +1,4 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
 
 export const FilledPriorityHigh = /*#__PURE__*/ props => <Icon {...props}>

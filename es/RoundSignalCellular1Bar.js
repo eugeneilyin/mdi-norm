@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, gy, ud } from './fragments';
 export var RoundSignalCellular1Bar =
 /*#__PURE__*/
 function RoundSignalCellular1Bar(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
-    d: "M4.41 22H20c1.1 0 2-.9 2-2V4.41c0-.89-1.08-1.34-1.71-.71L3.71 20.29c-.63.63-.19 1.71.7 1.71z"
-  }), h("path", {
-    d: "M12 12l-8.29 8.29c-.63.63-.19 1.71.7 1.71H12z"
+    d: "M4.41 22H20" + a + ud + "z"
+  }), React.createElement("path", {
+    d: "M12 12l-8.29 8.29" + gy + "H12z"
   }));
 };

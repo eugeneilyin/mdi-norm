@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { xw } from './fragments'
 
 export const TwoToneRemoveFromQueue = /*#__PURE__*/ props => <Icon {...props}>
-  <path opacity=".3" d="M3 17h18V5H3zm5-7h8v2H8z"/><path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 14H3V5h18zM8 10h8v2H8z"/>
+  <path opacity=".3" d={"M3 17h18V5H3zm5-7h8v2H8z"}/><path d={xw + "M8 10h8v2H8z"}/>
 </Icon>

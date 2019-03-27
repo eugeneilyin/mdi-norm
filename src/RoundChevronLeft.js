@@ -1,2 +1,2 @@
-import { RoundNavigateBefore as RoundChevronLeft } from './RoundNavigateBefore'
+import { RoundKeyboardArrowLeft as RoundChevronLeft } from './RoundKeyboardArrowLeft'
 export { RoundChevronLeft }

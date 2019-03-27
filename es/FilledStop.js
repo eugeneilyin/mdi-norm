@@ -1,9 +1,9 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
 export var FilledStop =
 /*#__PURE__*/
 function FilledStop(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     d: "M6 6h12v12H6z"
   }));
 };

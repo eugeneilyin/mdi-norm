@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c, e, f, g, j, k, n, x, bc, cg, jo } from './fragments';
 export var RoundFilterFrames =
 /*#__PURE__*/
 function RoundFilterFrames(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 4h-4L12.71.71c-.39-.39-1.02-.39-1.41 0L8 4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 16H5c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h3.52l3.52-3.5L15.52 6H19c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zM17 8H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 4h-4L12.71.71" + cg + "L8 4H4" + c + "v14" + jo + "V6" + b + "zm-1 16H5" + k + "V7" + bc + "h3.52l3.52-3.5L15.52 6H19" + n + "v12" + x + "zM17 8H7" + e + "v8" + j + "h10" + f + "V9" + g + "z"
   }));
 };

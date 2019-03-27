@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, c, d } from './fragments';
 export var FilledCropFree =
 /*#__PURE__*/
 function FilledCropFree(props) {
-  return h(Icon, props, h("path", {
-    d: "M3 5v4h2V5h4V3H5c-1.1 0-2 .9-2 2zm2 10H3v4c0 1.1.9 2 2 2h4v-2H5zm14 4h-4v2h4c1.1 0 2-.9 2-2v-4h-2zm0-16h-4v2h4v4h2V5c0-1.1-.9-2-2-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M3 5v4h2V5h4V3H5" + c + "zm2 10H3v4" + d + "h4v-2H5zm14 4h-4v2h4" + a + "v-4h-2zm0-16h-4v2h4v4h2V5" + b + "z"
   }));
 };

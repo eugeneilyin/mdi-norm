@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { zd } from './fragments'
 
 export const SharpIndeterminateCheckBox = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M21 3H3v18h18zm-4 10H7v-2h10z"/>
+  <path d={zd + "m-4 10H7v-2h10z"}/>
 </Icon>

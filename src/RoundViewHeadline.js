@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { e, j, o, bf } from './fragments'
 
 export const RoundViewHeadline = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M5 15h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1s.45 1 1 1zm0-8h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1s.45 1 1 1zM4 6c0 .55.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1z"/>
+  <path d={"M5 15h14" + o + "H5" + bf + "zm0 4h14" + o + "H5" + bf + "zm0-8h14" + o + "H5" + bf + "zM4 6" + j + "h14" + o + "H5" + e + "z"}/>
 </Icon>

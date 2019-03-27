@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { gv, sh } from './fragments';
 export var FilledSpa =
 /*#__PURE__*/
 function FilledSpa(props) {
-  return h(Icon, props, h("path", {
-    d: "M15.49 9.63c-.18-2.79-1.31-5.51-3.43-7.63-2.14 2.14-3.32 4.86-3.55 7.63 1.28.68 2.46 1.56 3.49 2.63 1.03-1.06 2.21-1.94 3.49-2.63zM12 15.45C9.85 12.17 6.18 10 2 10c0 5.32 3.36 9.82 8.03 11.49.63.23 1.29.4 1.97.51.68-.12 1.33-.29 1.97-.51C18.64 19.82 22 15.32 22 10c-4.18 0-7.85 2.17-10 5.45z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M15.49 9.63" + sh + "M12 15.45C9.85 12.17 6.18 10 2 10" + gv
   }));
 };

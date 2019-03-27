@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bd, eh, zj } from './fragments';
 export var OutlineAssistant =
 /*#__PURE__*/
 function OutlineAssistant(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83L12 20.17l-1.59-1.59-.58-.58H5V4h14zm-7-1l1.88-4.12L18 11l-4.12-1.88L12 5l-1.88 4.12L6 11l4.12 1.88z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 2H5" + bd + "h4l3 3 3-3h4" + eh + "m0 16" + zj + "V4h14zm-7-1l1.88-4.12L18 11l-4.12-1.88L12 5l-1.88 4.12L6 11l4.12 1.88z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { boj } from './fragments';
 export var SharpInbox =
 /*#__PURE__*/
 function SharpInbox(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 3H3.01v18H21zm-2 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H5V5h14z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M21 3H3.01v18H21zm-2 12" + boj + "H5V5h14z"
   }));
 };

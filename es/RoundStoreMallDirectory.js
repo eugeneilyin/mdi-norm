@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { f, j, o, bf, cc } from './fragments';
 export var RoundStoreMallDirectory =
 /*#__PURE__*/
 function RoundStoreMallDirectory(props) {
-  return h(Icon, props, h("path", {
-    d: "M20.16 7.8c-.09-.46-.5-.8-.98-.8H4.82c-.48 0-.89.34-.98.8L3 12v1c0 .55.45 1 1 1v5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-5h4v5c0 .55.45 1 1 1s1-.45 1-1v-5c.55 0 1-.45 1-1v-1zM12 18H6v-4h6zM5 6h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20.16 7.8c-.09-.46-.5-.8-.98-.8H4.82c-.48 0-.89.34-.98.8L3 12v1" + j + "v5" + j + "h8" + f + "v-5h4v5" + cc + "v-5" + f + "v-1zM12 18H6v-4h6zM5 6h14" + o + "H5" + bf + "z"
   }));
 };

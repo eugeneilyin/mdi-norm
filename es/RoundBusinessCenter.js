@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, c, d, k, n, x, bc, cu, ez, lq } from './fragments';
 export var RoundBusinessCenter =
 /*#__PURE__*/
 function RoundBusinessCenter(props) {
-  return h(Icon, props, h("path", {
-    d: "M13 16h-2c-.55 0-1-.45-1-1H3.01v4c0 1.1.9 2 2 2H19c1.1 0 2-.9 2-2v-4h-7c0 .55-.45 1-1 1zm7-9h-4c0-2.21-1.79-4-4-4S8 4.79 8 7H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-1c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v1h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 7c0-1.1.9-2 2-2s2 .9 2 2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M13 16h-2" + k + "H3.01v4" + d + "H19" + a + "v-4h-7" + x + "zm7-9h-4" + lq + "S8 4.79 8 7H4" + c + "v3" + cu + "h6v-1" + bc + "h2" + n + "v1h6" + a + "V9" + b + "zM10 7" + ez + "s2 .9 2 2z"
   }));
 };

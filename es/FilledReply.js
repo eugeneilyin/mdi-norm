@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bmp } from './fragments';
 export var FilledReply =
 /*#__PURE__*/
 function FilledReply(props) {
-  return h(Icon, props, h("path", {
-    d: "M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M10 9V5l-7 7 7 7v-4.1" + bmp
   }));
 };

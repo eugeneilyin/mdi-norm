@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, zi } from './fragments';
 export var RoundViewArray =
 /*#__PURE__*/
 function RoundViewArray(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 18h1c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1zM18 6v11c0 .55.45 1 1 1h1c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1zM9 18h7c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1H9c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 18h1" + zi + "H5" + e + "v11" + j + "zM18 6v11" + j + "h1" + zi + "h-1" + e + "zM9 18h7" + zi + "H9" + e + "v11" + j + "z"
   }));
 };

@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { a, b, c, d, bkh } from './fragments'
 
 export const FilledWallpaper = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M4 4h7V2H4c-1.1 0-2 .9-2 2v7h2zm6 9l-4 5h12l-3-4-2.03 2.71zm7-4.5c0-.83-.67-1.5-1.5-1.5S14 7.67 14 8.5s.67 1.5 1.5 1.5S17 9.33 17 8.5zM20 2h-7v2h7v7h2V4c0-1.1-.9-2-2-2zm0 18h-7v2h7c1.1 0 2-.9 2-2v-7h-2zM4 13H2v7c0 1.1.9 2 2 2h7v-2H4z"/>
+  <path d={"M4 4h7V2H4" + c + "v7h2zm6 9l-4 5h12l-3-4-2.03 2.71zm7-4.5" + bkh + "M20 2h-7v2h7v7h2V4" + b + "zm0 18h-7v2h7" + a + "v-7h-2zM4 13H2v7" + d + "h7v-2H4z"}/>
 </Icon>

@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { d, k, n, x, bc, bm, br } from './fragments'
 
 export const RoundLocalHospital = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 11h-3v3c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-3H7c-.55 0-1-.45-1-1v-2c0-.55.45-1 1-1h3V7c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v3h3c.55 0 1 .45 1 1v2c0 .55-.45 1-1 1z"/>
+  <path d={"M19 3H5" + bm + "L3 19" + d + "h14" + br + "m-2 11h-3v3" + x + "h-2" + k + "v-3H7" + k + "v-2" + bc + "h3V7" + bc + "h2" + n + "v3h3" + n + "v2" + x + "z"}/>
 </Icon>

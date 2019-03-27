@@ -1,4 +1,4 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { configure, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { Icon4K } from '../src/Icon4K'
@@ -8,10 +8,10 @@ import { Round4K } from '../src/Round4K'
 import { Sharp4K } from '../src/Sharp4K'
 import { TwoTone4K } from '../src/TwoTone4K'
 
-configure({ adapter: new Adapter() })
+configure({adapter: new Adapter()})
 
 describe('createThemedIcon', () => {
-  function getPathDraw(wrapper) {
+  function getPathDraw (wrapper) {
     return wrapper.childAt(0).props().d
   }
 

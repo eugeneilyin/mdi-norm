@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, f, g, j, o, bf, es, bga } from './fragments';
 export var RoundLineWeight =
 /*#__PURE__*/
 function RoundLineWeight(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 15H4c-.55 0-1 .45-1 1s.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1zm0-5H4c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1zm0-6H4c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zm.5 15h-17c-.28 0-.5.22-.5.5s.22.5.5.5h17c.28 0 .5-.22.5-.5s-.22-.5-.5-.5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 15H4" + bf + "h16" + o + "zm0-5H4" + e + "v1" + j + "h16" + f + "v-1" + g + "zm0-6H4" + e + "v2" + j + "h16" + f + "V5" + g + "zm.5 15h-17" + bga + "h17" + es + "s-.22-.5-.5-.5z"
   }));
 };

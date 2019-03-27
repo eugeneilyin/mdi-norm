@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, f, g, j, o, bf, ro } from './fragments';
 export var RoundNotes =
 /*#__PURE__*/
 function RoundNotes(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 11H4c-.55 0-1 .45-1 1s.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1zM4 18h10c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM20 6H4c-.55 0-1 .45-1 1v.01c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 11H4" + bf + "h16" + o + "zM4 18h10" + ro + "M20 6H4" + e + "v.01" + j + "h16" + f + "V7" + g + "z"
   }));
 };

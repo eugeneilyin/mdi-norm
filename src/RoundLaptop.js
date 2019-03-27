@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { k, n, o, x, bc, bf, jt, sq } from './fragments'
 
 export const RoundLaptop = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H1c-.55 0-1 .45-1 1s.45 1 1 1h22c.55 0 1-.45 1-1s-.45-1-1-1zM5 6h14c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1z"/>
+  <path d={"M20 18" + sq + "H4" + jt + "H1" + bf + "h22" + o + "zM5 6h14" + n + "v8" + x + "H5" + k + "V7" + bc + "z"}/>
 </Icon>

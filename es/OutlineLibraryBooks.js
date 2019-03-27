@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { nh } from './fragments';
 export var OutlineLibraryBooks =
 /*#__PURE__*/
 function OutlineLibraryBooks(props) {
-  return h(Icon, props, h("path", {
-    d: "M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12zM10 9h8v2h-8zm0 3h4v2h-4zm0-6h8v2h-8z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: nh + "m0 14H8V4h12zM10 9h8v2h-8zm0 3h4v2h-4zm0-6h8v2h-8z"
   }));
 };

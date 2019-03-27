@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { n, x, zd, bca } from './fragments';
 export var SharpHd =
 /*#__PURE__*/
 function SharpHd(props) {
-  return h(Icon, props, h("path", {
-    d: "M21 3H3v18h18zM11 15H9.5v-2h-2v2H6V9h1.5v2.5h2V9H11zm2-6h4c.55 0 1 .45 1 1v4c0 .55-.45 1-1 1h-4zm1.5 4.5h2v-3h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: zd + "M11 15" + bca + "m2-6h4" + n + "v4" + x + "h-4zm1.5 4.5h2v-3h-2z"
   }));
 };

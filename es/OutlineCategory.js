@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { gh, tf } from './fragments';
 export var OutlineCategory =
 /*#__PURE__*/
 function OutlineCategory(props) {
-  return h(Icon, props, h("path", {
-    d: "M12 2l-5.5 9h11zm0 3.84L13.93 9h-3.87zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3zm2-6h4v4H5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M12 2l-5.5 9h11zm0 3.84L13.93 9h-3.87zM17.5 13" + tf + "m0 7" + gh + "M3 21.5h8v-8H3zm2-6h4v4H5z"
   }));
 };

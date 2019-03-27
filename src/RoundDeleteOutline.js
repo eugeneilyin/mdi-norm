@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { b, c, k, n, x, bc, sn, we } from './fragments'
 
 export const RoundDeleteOutline = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2zM9 9h6c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1H9c-.55 0-1-.45-1-1v-8c0-.55.45-1 1-1zm6.5-5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z"/>
+  <path d={we + "V9" + b + "H8" + c + "zM9 9h6" + n + "v8" + x + "H9" + k + "v-8" + bc + "zm6.5-5" + sn}/>
 </Icon>

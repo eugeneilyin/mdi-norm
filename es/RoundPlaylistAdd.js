@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { o, bf, bu, blk, boo } from './fragments';
 export var RoundPlaylistAdd =
 /*#__PURE__*/
 function RoundPlaylistAdd(props) {
-  return h(Icon, props, h("path", {
-    d: "M13 10H3c-.55 0-1 .45-1 1s.45 1 1 1h10c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H3c-.55 0-1 .45-1 1s.45 1 1 1h10c.55 0 1-.45 1-1s-.45-1-1-1zm5 8v-3c0-.55-.45-1-1-1s-1 .45-1 1v3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3v3c0 .55.45 1 1 1s1-.45 1-1v-3h3c.55 0 1-.45 1-1s-.45-1-1-1zM3 16h6c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1s.45 1 1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M13 10H3" + boo + "m0-4H3" + boo + "m5 8v-3" + bu + "v3h-3" + blk + "zM3 16h6" + o + "H3" + bf + "z"
   }));
 };

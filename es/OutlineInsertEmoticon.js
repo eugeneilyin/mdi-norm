@@ -1,2 +1,2 @@
-import { FilledSentimentVerySatisfied as OutlineInsertEmoticon } from './FilledSentimentVerySatisfied';
+import { FilledInsertEmoticon as OutlineInsertEmoticon } from './FilledInsertEmoticon';
 export { OutlineInsertEmoticon };

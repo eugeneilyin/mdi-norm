@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, o, bc, cc, jr, bim } from './fragments';
 export var RoundBorderStyle =
 /*#__PURE__*/
 function RoundBorderStyle(props) {
-  return h(Icon, props, h("path", {
-    d: "M15 21h2v-2h-2zm4 0h2v-2h-2zM7 21h2v-2H7zm4 0h2v-2h-2zm8-4h2v-2h-2zm0-4h2v-2h-2zM3 5v15c0 .55.45 1 1 1s1-.45 1-1V6c0-.55.45-1 1-1h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-1.1 0-2 .9-2 2zm16 4h2V7h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M15 21" + bim + "M7 21h2v-2H7zm4 0" + jr + "m8-4" + jr + "m0-4" + jr + "M3 5v15" + cc + "V6" + bc + "h14" + o + "H5" + c + "zm16 4h2V7h-2z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, o, bf } from './fragments';
 export var RoundPowerInput =
 /*#__PURE__*/
 function RoundPowerInput(props) {
-  return h(Icon, props, h("path", {
-    d: "M2 10c0 .55.45 1 1 1h17c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1zm1 5h3c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1s.45 1 1 1zm7 0h3c.55 0 1-.45 1-1s-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1zm7 0h3c.55 0 1-.45 1-1s-.45-1-1-1h-3c-.55 0-1 .45-1 1s.45 1 1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M2 10" + j + "h17" + o + "H3" + e + "zm1 5h3" + o + "H3" + bf + "zm7 0h3" + o + "h-3" + bf + "zm7 0h3" + o + "h-3" + bf + "z"
   }));
 };

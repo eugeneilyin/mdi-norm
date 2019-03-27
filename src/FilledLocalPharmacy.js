@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { blq, bpo } from './fragments'
 
 export const FilledLocalPharmacy = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M21 5h-2.64l1.14-3.14L17.15 1l-1.46 4H3v2l2 6-2 6v2h18v-2l-2-6 2-6zm-5 9h-3v3h-2v-3H8v-2h3V9h2v3h3z"/>
+  <path d={"M21 5" + bpo + "v2h18v-2l-2-6 2-6zm-5 9" + blq + "V9h2v3h3z"}/>
 </Icon>

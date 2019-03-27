@@ -2,7 +2,7 @@ const importExternalHelpers = require('./plugins/babelPluginImportExternalHelper
 
 const getPresets = () => [
   ['@babel/preset-env', { targets: { browsers: ['ie >= 11'] }, modules: false }],
-  ['@babel/preset-react', { pragma: 'h' }]
+  '@babel/preset-react'
 ]
 
 const getPlugins = (modules, forProduction = true, logoutHelpers) => {

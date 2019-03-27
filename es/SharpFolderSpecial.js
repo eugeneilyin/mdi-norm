@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bnn } from './fragments';
 export var SharpFolderSpecial =
 /*#__PURE__*/
 function SharpFolderSpecial(props) {
-  return h(Icon, props, h("path", {
-    d: "M22 6H12l-2-2H2v16h20zm-4.06 11L15 15.28 12.06 17l.78-3.33-2.59-2.24 3.41-.29L15 8l1.34 3.14 3.41.29-2.59 2.24.78 3.33z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M22 6H12l-2-2H2v16h20zm-4.06 11" + bnn
   }));
 };

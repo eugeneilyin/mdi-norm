@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { o, cc, om, on, bdq } from './fragments';
 export var RoundFormatTextdirectionRToL =
 /*#__PURE__*/
 function RoundFormatTextdirectionRToL(props) {
-  return h(Icon, props, h("path", {
-    d: "M10 10v4c0 .55.45 1 1 1s1-.45 1-1V4h2v10c0 .55.45 1 1 1s1-.45 1-1V4h1c.55 0 1-.45 1-1s-.45-1-1-1h-6.83C8.08 2 6.22 3.53 6.02 5.61 5.79 7.99 7.66 10 10 10zm-2 7v-1.79c0-.45-.54-.67-.85-.35l-2.79 2.79c-.2.2-.2.51 0 .71l2.79 2.79c.31.31.85.09.85-.36V19h11c.55 0 1-.45 1-1s-.45-1-1-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M10 10v4" + cc + "V4h2v10" + cc + "V4h1" + o + "h-6.83C8.08 2 6.22 3.53 6.02 5.61 5.79 7.99 7.66 10 10 10zm-2 7v-1.79" + om + "l-2.79 2.79" + on + "l2.79 2.79" + bdq + "V19h11" + o + "z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, d, sq } from './fragments';
 export var FilledChromeReaderMode =
 /*#__PURE__*/
 function FilledChromeReaderMode(props) {
-  return h(Icon, props, h("path", {
-    d: "M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3" + c + "v13" + d + "h18" + sq + "zm0 15h-9V6h9z"
   }));
 };

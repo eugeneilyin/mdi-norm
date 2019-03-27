@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { e, j, ki, zi, bbs } from './fragments';
 export var RoundViewModule =
 /*#__PURE__*/
 function RoundViewModule(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 11h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm0 7h3c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm6 0h3c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm6 0h3c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm-6-7h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm5-5v4c0 .55.45 1 1 1h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 11h3" + zi + "H5" + ki + "zm0 7h3" + bbs + "H5" + ki + "zm6 0h3" + bbs + "h-3" + ki + "zm6 0h3" + bbs + "h-3" + ki + "zm-6-7h3" + zi + "h-3" + ki + "zm5-5v4" + j + "h3" + zi + "h-3" + e + "z"
   }));
 };

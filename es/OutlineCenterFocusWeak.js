@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, d, dr, bfu } from './fragments';
 export var OutlineCenterFocusWeak =
 /*#__PURE__*/
 function OutlineCenterFocusWeak(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 15H3v4c0 1.1.9 2 2 2h4v-2H5zM5 5h4V3H5c-1.1 0-2 .9-2 2v4h2zm7 3c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm7-11h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 15H3v4" + d + "h4v-2H5zM5 5h4V3H5" + c + "v4h2zm7 3" + dr + "m7-11" + bfu
   }));
 };

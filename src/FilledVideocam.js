@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { qn } from './fragments'
 
 export const FilledVideocam = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11z"/>
+  <path d={qn + "l4 4v-11z"}/>
 </Icon>

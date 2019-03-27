@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { zb } from './fragments';
 export var SharpBattery20 =
 /*#__PURE__*/
 function SharpBattery20(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     d: "M7 17v5h10v-5z"
-  }), h("path", {
+  }), React.createElement("path", {
     opacity: ".3",
-    d: "M17 4h-3V2h-4v2H7v13h10z"
+    d: zb + "v13h10z"
   }));
 };

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { wn } from './fragments';
 export var OutlineMoney =
 /*#__PURE__*/
 function OutlineMoney(props) {
-  return h(Icon, props, h("path", {
-    d: "M15 16h3c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1zm1-6h1v4h-1zm-7 6h3c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1H9c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1zm1-6h1v4h-1zM5 8h2v8H5zM2 4v16h20V4zm18 14H4V6h16z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: wn + "M5 8h2v8H5zM2 4v16h20V4zm18 14H4V6h16z"
   }));
 };

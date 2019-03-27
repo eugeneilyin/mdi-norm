@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { rp, yg, bls } from './fragments'
 
 export const RoundPhoneAndroid = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm-2.5 20h-3c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h3c.28 0 .5.22.5.5s-.22.5-.5.5zm3.5-3H7V4h10z"/>
+  <path d={bls + "m-2.5 20h-3" + rp + "s.22-.5.5-.5h3" + yg + "s-.22.5-.5.5zm3.5-3H7V4h10z"}/>
 </Icon>

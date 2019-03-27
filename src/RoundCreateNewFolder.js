@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { a, b, ct, cu, dk, el, em, ho, bfx } from './fragments'
 
 export const RoundCreateNewFolder = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M20 6h-8l-1.41-1.41C10.21 4.21 9.7 4 9.17 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-2 8h-2v2c0 .55-.45 1-1 1s-1-.45-1-1v-2h-2c-.55 0-1-.45-1-1s.45-1 1-1h2v-2c0-.55.45-1 1-1s1 .45 1 1v2h2c.55 0 1 .45 1 1s-.45 1-1 1z"/>
+  <path d={bfx + ct + "L2 18" + cu + "h16" + a + "V8" + b + "zm-2 8h-2v2" + em + "v-2h-2" + el + "h2v-2" + ho + "v2h2" + dk + "z"}/>
 </Icon>

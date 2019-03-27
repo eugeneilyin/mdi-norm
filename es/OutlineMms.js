@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { kw, baa } from './fragments';
 export var OutlineMms =
 /*#__PURE__*/
 function OutlineMms(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16zm-5.5-8L11 12.51 8.5 9.5 5 14h14z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: kw + baa + "m-5.5-8L11 12.51 8.5 9.5 5 14h14z"
   }));
 };

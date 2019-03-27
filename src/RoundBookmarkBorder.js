@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { b, c, n, bc } from './fragments'
 
 export const RoundBookmarkBorder = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V6c0-.55.45-1 1-1h8c.55 0 1 .45 1 1z"/>
+  <path d={"M17 3H7" + c + "v16l7-3 7 3V5" + b + "zm0 15l-5-2.18L7 18V6" + bc + "h8" + n + "z"}/>
 </Icon>

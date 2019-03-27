@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bj, qt } from './fragments';
 export var SharpLocalShipping =
 /*#__PURE__*/
 function SharpLocalShipping(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 8h-3V4H1v13h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm13.5-8.5l1.96 2.5H17V9.5zM18 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 8h-3V4H1v13h2" + qt + "h6" + qt + "h2v-5zM6 18" + bj + "m13.5-8.5l1.96 2.5H17V9.5zM18 18" + bj
   }));
 };

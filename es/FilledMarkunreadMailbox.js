@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, gx } from './fragments';
 export var FilledMarkunreadMailbox =
 /*#__PURE__*/
 function FilledMarkunreadMailbox(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 6H10v6H8V4h6V0H6v6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20 6H10v6H8V4h6V0H6v6" + gx + "V8" + b + "z"
   }));
 };

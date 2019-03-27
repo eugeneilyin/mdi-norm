@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { e, f, g, j, o, bf, bu, cc } from './fragments'
 
 export const RoundFullscreen = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/>
+  <path d={"M6 14" + e + "v3" + j + "h3" + o + "H7v-2" + g + "zm0-4" + f + "V7h2" + o + "H6" + e + "v3" + j + "zm11 7h-2" + bf + "h3" + f + "v-3" + bu + "zM14 6" + j + "h2v2" + cc + "V6" + g + "h-3" + e + "z"}/>
 </Icon>

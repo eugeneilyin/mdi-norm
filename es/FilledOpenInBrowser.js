@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, cr, dw, dz } from './fragments';
 export var FilledOpenInBrowser =
 /*#__PURE__*/
 function FilledOpenInBrowser(props) {
-  return h(Icon, props, h("path", {
-    d: "M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M19 4" + dw + "v12" + cr + "h4v-2H5V8h14v10h-4v2h4" + a + "V6" + dz + "m-7 6l-4 4h3v6h2v-6h3z"
   }));
 };

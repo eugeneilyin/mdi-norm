@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { e, j, o, ro, wb } from './fragments'
 
 export const RoundFormatAlignCenter = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M7 16c0 .55.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1H8c-.55 0-1 .45-1 1zm-3 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-8h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm3-5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1H8c-.55 0-1 .45-1 1zM3 4c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/>
+  <path d={"M7 16" + j + "h8" + o + "H8" + e + "zm-3 5h16" + ro + "m0-8h16" + ro + "m3-5" + j + "h8" + o + "H8" + e + "zM3 4" + wb}/>
 </Icon>

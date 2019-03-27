@@ -1,2 +1,2 @@
-import { FilledMic as SharpMic } from './FilledMic';
+import { OutlineMic as SharpMic } from './OutlineMic';
 export { SharpMic };

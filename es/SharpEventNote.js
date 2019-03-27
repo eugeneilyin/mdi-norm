@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { mm } from './fragments';
 export var SharpEventNote =
 /*#__PURE__*/
 function SharpEventNote(props) {
-  return h(Icon, props, h("path", {
-    d: "M17 10H7v2h10zm4-7h-3V1h-2v2H8V1H6v2H3v18h18zm-2 16H5V8h14zm-5-5H7v2h7z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M17 10H7v2h10zm4-7h-3" + mm + "H3v18h18zm-2 16H5V8h14zm-5-5H7v2h7z"
   }));
 };

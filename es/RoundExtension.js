@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, d, bm, py, zy } from './fragments';
 export var RoundExtension =
 /*#__PURE__*/
 function RoundExtension(props) {
-  return h(Icon, props, h("path", {
-    d: "M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7s2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M20.5 11H19V7" + b + "h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4" + bm + "v3.8H3.5" + zy + "H2V20" + d + "h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7s2.7 1.21 2.7 2.7V22H17" + a + "v-4h1.5" + py + "S21.88 11 20.5 11z"
   }));
 };

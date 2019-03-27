@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dk, el } from './fragments';
 export var RoundMaximize =
 /*#__PURE__*/
 function RoundMaximize(props) {
-  return h(Icon, props, h("path", {
-    d: "M4 3h16c.55 0 1 .45 1 1s-.45 1-1 1H4c-.55 0-1-.45-1-1s.45-1 1-1z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M4 3h16" + dk + "H4" + el + "z"
   }));
 };

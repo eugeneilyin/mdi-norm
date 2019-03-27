@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { f, j, bu, cc, bej } from './fragments';
 export var RoundVibration =
 /*#__PURE__*/
 function RoundVibration(props) {
-  return h(Icon, props, h("path", {
-    d: "M1 15c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zm3 2c.55 0 1-.45 1-1V8c0-.55-.45-1-1-1s-1 .45-1 1v8c0 .55.45 1 1 1zm18-7v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1zm-2 7c.55 0 1-.45 1-1V8c0-.55-.45-1-1-1s-1 .45-1 1v8c0 .55.45 1 1 1zM16.5 3h-9C6.67 3 6 3.67 6 4.5v15c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5zM16 19H8V5h8z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M1 15" + f + "v-4" + bu + "v4" + j + "zm3 2" + f + "V8" + bu + "v8" + j + "zm18-7v4" + cc + "v-4" + bu + "zm-2 7" + f + "V8" + bu + "v8" + j + "zM16.5 3" + bej
   }));
 };

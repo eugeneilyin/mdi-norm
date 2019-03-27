@@ -1,9 +1,9 @@
 import { _extends, classCallCheck, createClass, getPrototypeOf, inherits, objectWithoutProperties, possibleConstructorReturn } from "./utils/babelHelpers.js";
-import { Component as C, createElement as h } from 'react';
+import { Component, createElement as h } from 'react';
 export var Icon =
 /*#__PURE__*/
-function (_C) {
-  inherits(Icon, _C);
+function (_Component) {
+  inherits(Icon, _Component);
 
   function Icon() {
     classCallCheck(this, Icon);
@@ -77,4 +77,4 @@ function (_C) {
     }
   }]);
   return Icon;
-}(C);
+}(Component);

@@ -1,2 +1,2 @@
-import { OutlineFlashOff as TwoToneFlashOff } from './OutlineFlashOff'
+import { FilledFlashOff as TwoToneFlashOff } from './FilledFlashOff'
 export { TwoToneFlashOff }

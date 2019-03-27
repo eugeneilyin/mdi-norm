@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { c, bv, eh, fk, mk, mw, bnj } from './fragments'
 
 export const FilledSpeaker = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 1.99 2 1.99L17 22c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 2c1.1 0 2 .9 2 2s-.9 2-2 2c-1.11 0-2-.9-2-2s.89-2 2-2zm0 16c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+  <path d={"M17 2H7" + c + "v16" + mk + "L17 22" + eh + "m-5 2" + bnj + mw + "s.89-2 2-2zm0 16" + bv + "m0-8" + fk}/>
 </Icon>

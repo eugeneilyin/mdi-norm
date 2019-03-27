@@ -1,6 +1,7 @@
-import { createElement as h } from 'react'
+import React from 'react'
 import { Icon } from './Icon'
+import { b, d, o, bu, ed, xj, bbh } from './fragments'
 
 export const RoundAirlineSeatLegroomNormal = /*#__PURE__*/ props => <Icon {...props}>
-  <path d="M5 12V4c0-.55-.45-1-1-1s-1 .45-1 1v8c0 2.76 2.24 5 5 5h5c.55 0 1-.45 1-1s-.45-1-1-1H8c-1.66 0-3-1.34-3-3zm15.5 6H19v-7c0-1.1-.9-2-2-2h-5V3H6v8c0 1.65 1.35 3 3 3h7v5c0 1.1.9 2 2 2h2.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/>
+  <path d={"M5 12V4" + bu + "v8" + xj + "h5" + o + "H8" + ed + "zm15.5 6H19v-7" + b + "h-5V3H6v8c0 1.65 1.35 3 3 3h7v5" + d + "h2.5" + bbh + "z"}/>
 </Icon>

@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dk, el, sa } from './fragments';
 export var RoundRoomService =
 /*#__PURE__*/
 function RoundRoomService(props) {
-  return h(Icon, props, h("path", {
-    d: "M3 17h18c.55 0 1 .45 1 1s-.45 1-1 1H3c-.55 0-1-.45-1-1s.45-1 1-1zm10.84-9.21c.1-.24.16-.51.16-.79 0-1.1-.9-2-2-2s-2 .9-2 2c0 .28.06.55.16.79C6.25 8.6 3.27 11.93 3 16h18c-.27-4.07-3.25-7.4-7.16-8.21z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M3 17h18" + dk + "H3" + el + "zm10.84-9.21" + sa
   }));
 };

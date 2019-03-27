@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { jr, ro } from './fragments';
 export var RoundToc =
 /*#__PURE__*/
 function RoundToc(props) {
-  return h(Icon, props, h("path", {
-    d: "M4 9h12c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h12c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h12c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm15 0h2v-2h-2zm0-10v2h2V7zm0 6h2v-2h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M4 9h12" + ro + "m0 4h12" + ro + "m0 4h12" + ro + "m15 0" + jr + "m0-10v2h2V7zm0 6" + jr
   }));
 };

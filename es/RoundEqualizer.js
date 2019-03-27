@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, b, d, sq } from './fragments';
 export var RoundEqualizer =
 /*#__PURE__*/
 function RoundEqualizer(props) {
-  return h(Icon, props, h("path", {
-    d: "M12 20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2s-2 .9-2 2v12c0 1.1.9 2 2 2zm-6 0c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2s-2 .9-2 2v4c0 1.1.9 2 2 2zm10-9v7c0 1.1.9 2 2 2s2-.9 2-2v-7c0-1.1-.9-2-2-2s-2 .9-2 2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M12 20" + sq + "s-2 .9-2 2v12" + d + "zm-6 0" + a + "v-4" + b + "s-2 .9-2 2v4" + d + "zm10-9v7" + d + "s2-.9 2-2v-7" + b + "s-2 .9-2 2z"
   }));
 };
