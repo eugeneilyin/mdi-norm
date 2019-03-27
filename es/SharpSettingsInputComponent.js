@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bu } from './fragments';
 export var SharpSettingsInputComponent =
 /*#__PURE__*/
 function SharpSettingsInputComponent(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 2c0-.55-.45-1-1-1s-1 .45-1 1v4H1v6h6V6H5zm4 16.82h2V23h2v-4.18h2V14H9zm-8 0h2V23h2v-4.18h2V14H1zM21 6V2c0-.55-.45-1-1-1s-1 .45-1 1v4h-2v6h6V6zm-8-4c0-.55-.45-1-1-1s-1 .45-1 1v4H9v6h6V6h-2zm4 16.82h2V23h2v-4.18h2V14h-6z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 2" + bu + "v4H1v6h6V6H5zm4 16.82h2V23h2v-4.18h2V14H9zm-8 0h2V23h2v-4.18h2V14H1zM21 6V2" + bu + "v4h-2v6h6V6zm-8-4" + bu + "v4H9v6h6V6h-2zm4 16.82h2V23h2v-4.18h2V14h-6z"
   }));
 };

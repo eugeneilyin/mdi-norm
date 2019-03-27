@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bj, bkg } from './fragments';
 export var TwoToneLaptopMac =
 /*#__PURE__*/
 function TwoToneLaptopMac(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M4 5h16v11H4z"
-  }), h("path", {
-    d: "M20 18c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2H0c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2zM4 5h16v11H4zm8 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+  }), React.createElement("path", {
+    d: bkg + "M4 5h16v11H4zm8 14" + bj
   }));
 };

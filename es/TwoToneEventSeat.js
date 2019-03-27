@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c } from './fragments';
 export var TwoToneEventSeat =
 /*#__PURE__*/
 function TwoToneEventSeat(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M9 5h6v7H9z"
-  }), h("path", {
-    d: "M4 21h2v-4h12v4h2v-6H4zM17 5c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v9h10zm-2 7H9V5h6zm4-2h3v3h-3zM2 10h3v3H2z"
+  }), React.createElement("path", {
+    d: "M4 21h2v-4h12v4h2v-6H4zM17 5" + b + "H9" + c + "v9h10zm-2 7H9V5h6zm4-2h3v3h-3zM2 10h3v3H2z"
   }));
 };

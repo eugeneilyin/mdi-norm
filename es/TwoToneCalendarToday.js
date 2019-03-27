@@ -1,11 +1,12 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bnu } from './fragments';
 export var TwoToneCalendarToday =
 /*#__PURE__*/
 function TwoToneCalendarToday(props) {
-  return h(Icon, props, h("path", {
-    d: "M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 2v3H4V5zM4 21V10h16v11z"
-  }), h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: bnu + "m0 2v3H4V5zM4 21V10h16v11z"
+  }), React.createElement("path", {
     opacity: ".3",
     d: "M4 5.01h16V8H4z"
   }));

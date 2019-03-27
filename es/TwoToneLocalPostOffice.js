@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { na } from './fragments';
 export var TwoToneLocalPostOffice =
 /*#__PURE__*/
 function TwoToneLocalPostOffice(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M12 11l8-5H4zM4 8v10h16V8l-8 5z"
-  }), h("path", {
-    d: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5zm-8-7L4 6h16z"
+  }), React.createElement("path", {
+    d: "M20 4" + na + "m0 14H4V8l8 5 8-5zm-8-7L4 6h16z"
   }));
 };

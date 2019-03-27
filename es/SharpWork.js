@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c } from './fragments';
 export var SharpWork =
 /*#__PURE__*/
 function SharpWork(props) {
-  return h(Icon, props, h("path", {
-    d: "M22 6h-6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H2v15h20zm-8 0h-4V4h4z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M22 6h-6V4" + b + "h-4" + c + "v2H2v15h20zm-8 0h-4V4h4z"
   }));
 };

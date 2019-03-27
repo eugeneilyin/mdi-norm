@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bnc } from './fragments';
 export var SharpSwitchCamera =
 /*#__PURE__*/
 function SharpSwitchCamera(props) {
-  return h(Icon, props, h("path", {
-    d: "M22 4h-5.17L15 2H9L7.17 4H2v16h20zm-7 11.5V13H9v2.5L5.5 12 9 8.5V11h6V8.5l3.5 3.5-3.5 3.5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M22 4h-5.17L15 2H9L7.17 4H2v16h20zm-7 11.5" + bnc
   }));
 };

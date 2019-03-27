@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { a, c, bm, ls } from './fragments';
 export var TwoToneFileCopy =
 /*#__PURE__*/
 function TwoToneFileCopy(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M14 7H8v14h11v-9h-5z"
-  }), h("path", {
-    d: "M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zm4 16H8V7h6v5h5z"
+  }), React.createElement("path", {
+    d: "M16 1H4" + c + "v14h2V3h12zm-1 4H8" + bm + "L6 21" + ls + "H19" + a + "V11zm4 16H8V7h6v5h5z"
   }));
 };

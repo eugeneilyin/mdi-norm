@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { dg, dn } from './fragments';
 export var TwoToneGrain =
 /*#__PURE__*/
 function TwoToneGrain(props) {
-  return h(Icon, props, h("path", {
-    d: "M18 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM6 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm4 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M18 8" + dg + "m0 8" + dg + "M6 8" + dn + "m8 0" + dn + "m-4 8" + dg + "m0-12" + dn + "m4 12" + dn + "m-8 4" + dg
   }));
 };

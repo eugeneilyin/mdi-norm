@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { g, bog } from './fragments';
 export var TwoToneFormatPaint =
 /*#__PURE__*/
 function TwoToneFormatPaint(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M6 4h10v2H6z"
-  }), h("path", {
-    d: "M17 2H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3V3c0-.55-.45-1-1-1zm-1 4H6V4h10z"
+  }), React.createElement("path", {
+    d: "M17 2" + bog + "h-3V3" + g + "zm-1 4H6V4h10z"
   }));
 };

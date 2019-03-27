@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { k, n, x, bc, wn } from './fragments';
 export var TwoToneMoney =
 /*#__PURE__*/
 function TwoToneMoney(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
-    d: "M10 10h1v4h-1zm6 0h1v4h-1zM4 18h16V6H4zm10-9c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v6c0 .55-.45 1-1 1h-3c-.55 0-1-.45-1-1zM8 9c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v6c0 .55-.45 1-1 1H9c-.55 0-1-.45-1-1zM5 8h2v8H5z"
-  }), h("path", {
-    d: "M15 16h3c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1zm1-6h1v4h-1zm-7 6h3c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1H9c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1zm1-6h1v4h-1zM5 8h2v8H5zM2 4v16h20V4zm18 14H4V6h16z"
+    d: "M10 10h1v4h-1zm6 0h1v4h-1zM4 18h16V6H4zm10-9" + bc + "h3" + n + "v6" + x + "h-3" + k + "zM8 9" + bc + "h3" + n + "v6" + x + "H9" + k + "zM5 8h2v8H5z"
+  }), React.createElement("path", {
+    d: wn + "M5 8h2v8H5zM2 4v16h20V4zm18 14H4V6h16z"
   }));
 };

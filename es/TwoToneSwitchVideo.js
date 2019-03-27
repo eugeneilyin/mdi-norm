@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bmx } from './fragments';
 export var TwoToneSwitchVideo =
 /*#__PURE__*/
 function TwoToneSwitchVideo(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M4 17h12V7H4zm4-8v2h4V9l3 3-3 3v-2H8v2l-3-3 3-3z"
-  }), h("path", {
-    d: "M8 13h4v2l3-3-3-3v2H8V9l-3 3 3 3zm10-3.5V6c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-3.5l4 4v-13zM16 17H4V7h12z"
+  }), React.createElement("path", {
+    d: bmx
   }));
 };

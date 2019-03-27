@@ -1,2 +1,2 @@
-import { TwoToneCloud as TwoToneWbCloudy } from './TwoToneCloud';
+import { TwoToneCloudQueue as TwoToneWbCloudy } from './TwoToneCloudQueue';
 export { TwoToneWbCloudy };

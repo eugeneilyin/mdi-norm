@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { fs, me, na } from './fragments';
 export var TwoToneSubtitles =
 /*#__PURE__*/
 function TwoToneSubtitles(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
-    d: "M4 18h16V6H4zm14-2h-2v-2h2zm-8-6h8v2h-8zm-4 0h2v2H6zm0 4h8v2H6z"
-  }), h("path", {
-    d: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z"
+    d: "M4 18h16V6H4zm14-2" + me + "m-8-6h8v2h-8zm-4 0h2v2H6zm0 4h8v2H6z"
+  }), React.createElement("path", {
+    d: "M20 4" + na + "m0 14H4V6h16zM6 10h2v2H6zm0 4h8v2H6zm10 0" + fs + "m-6-4h8v2h-8z"
   }));
 };

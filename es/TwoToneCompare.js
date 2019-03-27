@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bd, br } from './fragments';
 export var TwoToneCompare =
 /*#__PURE__*/
 function TwoToneCompare(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M19 5h-5v7l5 6zm-9 13v-6l-5 6z"
-  }), h("path", {
-    d: "M19 3h-5v2h5v13l-5-6v9h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-2h-2v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h5v2h2zm-2 17H5l5-6z"
+  }), React.createElement("path", {
+    d: "M19 3h-5v2h5v13l-5-6v9h5" + br + "m-7-2h-2v2H5" + bd + "h5v2h2zm-2 17H5l5-6z"
   }));
 };

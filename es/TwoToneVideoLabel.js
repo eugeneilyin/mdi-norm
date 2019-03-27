@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { cf } from './fragments';
 export var TwoToneVideoLabel =
 /*#__PURE__*/
 function TwoToneVideoLabel(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M3 5h18v11H3z"
-  }), h("path", {
-    d: "M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H3V5h18z"
+  }), React.createElement("path", {
+    d: cf + "m0 13H3V5h18z"
   }));
 };

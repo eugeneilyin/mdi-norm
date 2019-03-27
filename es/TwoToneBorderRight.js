@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { fs, gq } from './fragments';
 export var TwoToneBorderRight =
 /*#__PURE__*/
 function TwoToneBorderRight(props) {
-  return h(Icon, props, h("path", {
-    d: "M3 3h2v2H3zm0 16h2v2H3zM15 3h2v2h-2zm0 16h2v2h-2zm0-8h2v2h-2zM3 15h2v2H3zm0-4h2v2H3zm0-4h2v2H3zm8 8h2v2h-2zm-4-4h2v2H7zm0-8h2v2H7zm12 0h2v18h-2zM7 19h2v2H7zm4-16h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2zm0 8h2v2h-2z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M3 3h2v2H3zm0 16h2v2H3zM15 3" + fs + "m0 16" + fs + "m0-8" + fs + "M3 15h2v2H3zm0-4h2v2H3zm0-4h2v2H3zm8 8" + fs + "m-4-4h2v2H7zm0-8h2v2H7zm12 0h2v18h-2zM7 19h2v2H7zm4-16" + gq + "m0 4" + fs + "m0 8" + fs
   }));
 };

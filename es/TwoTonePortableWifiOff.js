@@ -1,2 +1,2 @@
-import { FilledPortableWifiOff as TwoTonePortableWifiOff } from './FilledPortableWifiOff';
+import { OutlinePortableWifiOff as TwoTonePortableWifiOff } from './OutlinePortableWifiOff';
 export { TwoTonePortableWifiOff };

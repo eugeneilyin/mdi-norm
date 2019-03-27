@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, c, fm, bgv } from './fragments';
 export var TwoToneInsertChart =
 /*#__PURE__*/
 function TwoToneInsertChart(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
-    d: "M19 5H5v14h14zM9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2z"
-  }), h("path", {
-    d: "M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5zm2 5h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"
+    d: "M19 5H5v14h14zM9 17" + bgv
+  }), React.createElement("path", {
+    d: "M3 5v14" + fm + "V5" + b + "H5" + c + "zm2 0h14v14H5zm2 5h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"
   }));
 };

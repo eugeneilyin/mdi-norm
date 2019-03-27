@@ -1,9 +1,10 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { c, d, fk, bfu } from './fragments';
 export var TwoToneFilterCenterFocus =
 /*#__PURE__*/
 function TwoToneFilterCenterFocus(props) {
-  return h(Icon, props, h("path", {
-    d: "M5 5h4V3H5c-1.1 0-2 .9-2 2v4h2zm7 4c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm7-6h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2zM5 15H3v4c0 1.1.9 2 2 2h4v-2H5z"
+  return React.createElement(Icon, props, React.createElement("path", {
+    d: "M5 5h4V3H5" + c + "v4h2zm7 4" + fk + "m7-6" + bfu + "M5 15H3v4" + d + "h4v-2H5z"
   }));
 };

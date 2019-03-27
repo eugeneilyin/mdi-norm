@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { bau } from './fragments';
 export var TwoToneDrafts =
 /*#__PURE__*/
 function TwoToneDrafts(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M12 15.36l-8-5.02V18h16l-.01-7.63z"
-  }), h("path", {
-    d: "M21.99 8c0-.72-.37-1.35-.94-1.7L12 1 2.95 6.3C2.38 6.65 2 7.28 2 8v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zM12 3.32L19.99 8v.01L12 13 4 8zM4 18v-7.66l8 5.02 7.99-4.99L20 18z"
+  }), React.createElement("path", {
+    d: bau + "M12 3.32L19.99 8v.01L12 13 4 8zM4 18v-7.66l8 5.02 7.99-4.99L20 18z"
   }));
 };

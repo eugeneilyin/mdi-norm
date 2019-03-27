@@ -1,2 +1,2 @@
-import { FilledSmokeFree as TwoToneSmokeFree } from './FilledSmokeFree';
+import { SharpSmokeFree as TwoToneSmokeFree } from './SharpSmokeFree';
 export { TwoToneSmokeFree };

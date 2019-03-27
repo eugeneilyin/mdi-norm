@@ -1,9 +1,9 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
 export var SharpPhonelink =
 /*#__PURE__*/
 function SharpPhonelink(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     d: "M4 6h18V4H2v13H0v3h14v-3H4zm20 2h-8v12h8zm-2 9h-4v-7h4z"
   }));
 };

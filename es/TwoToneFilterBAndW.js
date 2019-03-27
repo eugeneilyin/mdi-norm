@@ -1,12 +1,13 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
+import { b, be } from './fragments';
 export var TwoToneFilterBAndW =
 /*#__PURE__*/
 function TwoToneFilterBAndW(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     opacity: ".3",
     d: "M19 5h-7v6l7 8zm-7 14v-8l-7 8z"
-  }), h("path", {
-    d: "M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-9 0H5l7-8V5h7v14l-7-8z"
+  }), React.createElement("path", {
+    d: "M21 19V5" + b + "H5" + be + "zm-9 0H5l7-8V5h7v14l-7-8z"
   }));
 };

@@ -1,9 +1,9 @@
-import { createElement as h } from 'react';
+import React from 'react';
 import { Icon } from './Icon';
 export var TwoToneZoomOutMap =
 /*#__PURE__*/
 function TwoToneZoomOutMap(props) {
-  return h(Icon, props, h("path", {
+  return React.createElement(Icon, props, React.createElement("path", {
     d: "M17.3 5.3l-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3h-6zM9 3H3v6l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3zm-.83 11.41L5.3 17.3 3 15v6h6l-2.3-2.3 2.89-2.87zm7.66 0l-1.42 1.42 2.89 2.87L15 21h6v-6l-2.3 2.3z"
   }));
 };
