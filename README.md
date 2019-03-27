@@ -22,7 +22,11 @@ All material design system SVG icons provided as fixed, normalized, minifed, and
 
 ## The problem
 
-Standart Google material design [SVG icons][google-md-icons] have lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output. The same issues are present in [@material-ui/icons][material-ui] library.
+Standart Google material design [SVG icons][google-md-icons] have a lot of drawing issues, unnecessary SVG elements and attributes as well huge amount of duplicates of the same visual icons. Duplicates not even in SVG code but the different SVG code draws the same pixels output. The same issues are present in [@material-ui/icons][material-ui] library.
+
+![filled replay 30 issue][filled-reaply-30-issue]
+
+Check more [issues][issues] and [duplicates][duplicates] (it could takes some time to render html).
 
 ## This solution
 
@@ -65,11 +69,12 @@ npm install --save mdi-norm
 
 * Doesn't depends on any external libraries like `@babel/runtime`
 * Tiny base `<Icon />` component overhead (**2,360** bytes minified / **858** bytes gzipped)
-* The same codbase is used for all icon duplicates which gives _~40%_ SVG code reduction in average
+* The same codbase is used for all icon duplicates which gives _~40%_ of SVG code reduction in average
+* More than 1000 common used SVG code fragments are extracted and deduplicated, which gived you _~30%_ of SVG code reduction additionally
 * Dynamic theming support for _filled_, _outline_, _round_, _sharp_, and _two-tone_ icon variants (see [themed icons](#themed-icons))
 * No `className` prop used, you can use icons with any css framework, style library or vanilla css
 * Accessibility complaint with **WAI-ARIA** (see [decorative and semantic icons](#decorative-and-semantic-icons))
-* Own optimized rendering **NOT** based on `React.PureComponent` or `_pure` from recompose (both approaches are ineffective for icons because always re-render even if props were not changed due to internal createElement calls for `children` prop)
+* Own optimized rendering **NOT** based on `React.PureComponent` or `_pure` from recompose (both approaches are ineffective for icons because always re-render even if props were not changed due to internal createElement calls for the `children` prop)
 * Your SVG icons will be included into bundle, which is not require separate icon-font file request and load
 * React components code is optimized to reduce a bundle overhead (special pure function annotations, code reusage, tiny helpers)
 * All [benefits][icon-fonts-vs-svg] of **Inline SVG** compared to **Icon Fonts**
@@ -83,11 +88,12 @@ Compared to the official Google system icon set the next fixes, normalization, m
 * Deep `<path>` elements draw commands elimination by removing all commands not involved in pixels rendering
 * Identified 1,994 duplicates (about ~38%, details [here][duplicates]) in 5,220 icons based on:
   * Duplicates from equal SVG-code after clearing, normalization, and reordering of SVG elements and attributes
-  * Duplicates from the same pixels rendering provided by _different_ SVG-code
+  * Duplicates from the same pixels rendering provided by the _different_ SVG-code
   * Duplicates from [Structural Similarity (SSIM)][ssim] cross-validation and compare
   * Duplicates from Visual Similarity computation, sorting and cross-validation for the rest of unique icons
 * All duplicated icons use the **most compact** single SVG-code variant
 * Manual SVG-code fixes for cases where render coordinates are not pixel-aligned with Google material design icon keylines
+* Lot of common SVG code fragments were extracted into separate file to gives you ~30% SVG code elimination
 
 ## Usage
 
@@ -100,33 +106,35 @@ If you omit prefix and use direct icon name (like `FitnessCenter` in the example
 
 ### With Babel macros
 
-Imagine that we need five icons to render some component: two dynamically themed icons `<Star />`, `<People />` and three icons from the concrete themes `<RoundCake />`, `<SharpAdd />`, and `<TwoToneBatteryAlert />`.
+To have the best development experience the [Babel Macros][babel-macros] is provided with this library. This makes possible to run Babel transforms without changing a Babel config (the Create React App v2 is already contains babel macros in .babelc file).
 
-With direct import approach you have to write lot of boilerplate code to use them:
-
-```jsx
-// Import required icon components
-import { Star } from 'mdi-norm/es/Star'
-import { People } from 'mdi-norm/es/People'
-import { RoundCake } from 'mdi-norm/es/RoundCake'
-import { SharpAdd } from 'mdi-norm/es/SharpAdd'
-import { TwoToneBatteryAlert } from 'mdi-norm/es/TwoToneBatteryAlert'
-...
-// Then use them
-export const MyComponent = () => 
-  <>
-    <Star theme="outline" />
-    <People theme="two-tone" shade="on-light" state="active"/>
-    <RoundCake size={48} />
-    <SharpAdd title="Add new item" />
-    <TwoToneBatteryAlert fill="#F00" />
-  </>;
+Add babel-macros with yarn:
+```
+yarn add -dev babel-plugin-macros
 ```
 
-This is boring, and error prone. To have a better development experience the [Babel Macros][babel-macros] is provided with this library. This makes possible to run Babel transforms without changing a Babel config. The Create React App v2 is already contains babel macros in .babelc file.
+Or with with npm:
+```
+npm install --save-dev babel-plugin-macros
+```
 
-With `mdi-norm/macro` all necessary icon imports will be provided automatically - the code will be transpiled before compilation.
-All you need is just add macro to your import section:
+Then add `babel-plugin-macros` **to the top** of the used babel plugins:
+
+```
+  options: {
+    presets: [
+      '@babel/preset-env',
+      '@babel/preset-react',
+      ...
+    ],
+    plugins: [
+      'babel-plugin-macros',
+      ...other plugins...
+    ]  
+  }
+```
+
+Now you can use `mdi-norm/macro` and all necessary icon imports will be embed into js code **automatically**, you will get a lot of syntactic sugar to specify icons which will be transpiled before compilation. All you need is to add macro to your import section:
 
 ```jsx
 import i from 'mdi-norm/macro'
@@ -138,10 +146,17 @@ Or if you have to use CommonJS approach:
 const i = require("mdi-norm/macro");
 ```
 
-Then place any icons in you code and all import/requires will be added automatically.
+Then place any icons in your code and **all import/requires** will be added **automatically**.
 For example the `missed_video_call` icon can be specified by the next syntax contructions (choose you preferred way):
 
 ```jsx
+import i from 'mdi-norm/macro'
+
+// As a string literal
+i`missed_video_call`({theme: "sharp", size: "2em"})
+i`filled-missed-video-call`
+i`SharpMissedVideoCall`
+
 // As a JSX tag with icon name
 
 // With underscore (standart icon name)
@@ -160,11 +175,6 @@ For example the `missed_video_call` icon can be specified by the next syntax con
 <i name="missed_video_call" theme="two-tone" />
 <i name="outline-missed-video-call" title="Missed call" />
 
-// As a string literal
-i`missed_video_call`({theme: "sharp", size: "2em"})
-i`filled-missed-video-call`
-i`SharpMissedVideoCall`
-
 // As a function call
 i('TwoTone missed-video_call', {className: 'material-icon', shade: 'on-dark', state: 'inactive'});
 ```
@@ -177,7 +187,23 @@ import { MissedVideoCall } from 'mdi-norm/es/MissedVideoCall'
 const MissedVideoCall = require("mdi-norm/lib/MissedVideoCall");
 ```
 
-> Note: With this macros you can easily migrate to SVG from your old code based on icon fonts:
+By default all used icons will be transipled into JSX tags, but if you want to use Icon component name directly add `@`-sign prefix to the icon name. In this case the direct icon function will be placed, not transpiled into JSX tag (this is usefull to pass icons as props). For example:
+
+```jsx
+import React from 'react'
+import { render } from 'react-dom'
+import i from 'mdi-norm/macro'
+
+const WarningButton = ({icon: Icon, title}) =>
+  <button>
+    <Icon color="red" size={32}/>
+    {title}
+  </button>
+
+render(<WarningButton icon={i`@Cake`} title='Eat me!'/>, document.getElementById('root'))
+```
+
+> Note: With this macros you can easily migrate to SVG from your icon fonts without change JSX tags code base:
 > ```jsx
 > <i className="material-icons">star</i>
 > ``` 
@@ -195,17 +221,9 @@ export const MyComponent = ({text}) => (
   </div>);
 ```
 
-You can pass icons as parameters:
-
-```jsx
-import Icon from 'mdi-norm/macro'
-...
-<MyComponent icon={Icon`markunread mailbox`} title="My Title"/>
-```
-
 ### Direct icons import
 
-The best way for fast compilation time and tree shaking is to use direct import of required ES icon files from `mdi-norm/es/` path:
+If you don't want to use `mdi-norm/macro` and place each used icon import manually use direct import of required ES icon files from `mdi-norm/es/` path:
 
 > Note: Pay attention to brackets, default import is not used
 
@@ -243,10 +261,9 @@ const { RoundRoomService } = require('mdi-norm/lib/RoundRoomService');
 <RoundRoomService />
 ```
 
-Also you can import all 6,264 icon classes into your bundle (**NOT** recomended, the all 6,264 icons SVG-code has ~1.5M raw / ~300Kb gzipped size):
+Also you can import all 6,264 icon-classes into your bundle:
 
 ```jsx
-// Import all icons from package (not recomended at all)
 import * as Icons from 'mdi-norm'
 
 <Icons.Spa theme="outline"/>
@@ -510,3 +527,4 @@ MIT
 [npm-downloads]: https://www.npmjs.com/package/mdi-norm
 [babel-macros]: https://github.com/kentcdodds/babel-plugin-macros
 [material-ui]: https://github.com/mui-org/material-ui/tree/next/packages/material-ui-icons
+[filled-reaply-30-issue]: https://github.com/eugeneilyin/mdi-norm/blob/master/docs/compare-filled-replay-30.png
