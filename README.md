@@ -527,4 +527,4 @@ MIT
 [npm-downloads]: https://www.npmjs.com/package/mdi-norm
 [babel-macros]: https://github.com/kentcdodds/babel-plugin-macros
 [material-ui]: https://github.com/mui-org/material-ui/tree/next/packages/material-ui-icons
-[filled-reaply-30-issue]: https://github.com/eugeneilyin/mdi-norm/blob/master/docs/compare-filled-replay-30.png
+[filled-reaply-30-issue]: https://raw.githubusercontent.com/eugeneilyin/mdi-norm/master/docs/compare-filled-replay-30.png
