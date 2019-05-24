@@ -15,6 +15,7 @@ function getIconDescriptor (name) {
   if (typeof name !== 'string') {
     return name
   }
+
   var iconName = name.trim().replace(/\s\s|\s/g, ' ')
 
   function charMap (char, index) {
@@ -27,13 +28,13 @@ function getIconDescriptor (name) {
     )
   }
 
-  iconName = iconName.split('').map(charMap).join('').replace(/-|_|\s/g, '')
-
   var asIdentifier = iconName.indexOf(NAME_PREFIX_USE_AS_IDENTIFIER) === 0
 
   if (asIdentifier) {
     iconName = iconName.slice(NAME_PREFIX_USE_AS_IDENTIFIER.length)
   }
+
+  iconName = iconName.split('').map(charMap).join('').replace(/-|_|\s/g, '')
 
   if (iconName[0] >= '0' && iconName[0] <= '9') {
     iconName = NAME_PREFIX_NUMBER_IDENTIFIER + iconName

@@ -1,6 +1,6 @@
 {
   "name": "mdi-norm",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Fixed, normalized, minifed, and deduplicated Material Design system SVG icons for React",
   "license": "MIT",
   "keywords": [
