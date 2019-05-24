@@ -110,7 +110,7 @@ To have the best development experience the [Babel Macros][babel-macros] is prov
 
 Add babel-macros with yarn:
 ```
-yarn add -dev babel-plugin-macros
+yarn add --dev babel-plugin-macros
 ```
 
 Or with with npm:
@@ -217,7 +217,7 @@ import Icon from 'mdi-norm/macro'
 export const MyComponent = ({text}) => (
   <div>
     <Icon name="sharp-location-searching" className="icon"/>
-    My Component
+    {text}
   </div>);
 ```
 
